@@ -17,9 +17,62 @@
         
         <!--External fonts.-->
         <!--<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">-->
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
            
         <!--Css before external file.-->
         <style>
+        body {
+            color: #4d9a06;
+            background-color: #300a24;
+            font-family: 'Press Start 2P', cursive;
+        }
+        /*SIDEBAR START*/
+        #navbar {
+            /*Full-heigh, to remove if "auto" is wanted.*/
+            height: 100%;
+            /*Set the width of the sidebar.*/
+            width : 200px;
+            /*Fixed sidebar, stay in place while scrolling.*/
+            position: fixed;
+            /*Stay on top of everything.*/
+            z-index: 1;
+            /*Stay at the top.*/
+            top: 0;
+            left: 0;
+            background-color: #261526;
+            /*Disable horizontal scroll.*/
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        /*Nav bar header.*/
+        #navbar header {
+            padding: 6px 8px 6px 16px;
+            color: #3680d6;
+        }
+
+        /*Navigation menu links.*/
+        #navbar a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 24px;
+            color: #4d9a06;
+            display: block;
+        }
+        /*Change color mouse over.*/
+        #navbar a:hover {
+            color: #75dc16;
+        }
+        /*Style the page content.*/
+        #main-doc {
+            /*The same as the navbar.*/
+            margin-left: 200px;
+            padding: 0px 10px;
+        }
+        /*MEDIA QUERIES TEST*/
+        /*@media screen and (max-height: 450px) {
+            #navbar {padding-top: 15px;}
+            #navbar a {font-size: 18px;}
+        }*/
         </style>    
     </head>
 
