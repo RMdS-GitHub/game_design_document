@@ -10,7 +10,7 @@
         <title>Creating a Game Design Document</title>
 
         <!--Css external file-->
-        <!--<link rel='stylesheet' type='text/css' href='css/css.css'>-->
+        <link rel='stylesheet' type='text/css' href='css/css_normalize.css'>-->
         
         <!--FontAwesome.-->
         <!--<script src="https://kit.fontawesome.com/f08dd09bd3.js" crossorigin="anonymous"></script>-->
@@ -25,6 +25,7 @@
             color: #4d9a06;
             background-color: #300a24;
             font-family: 'Press Start 2P', cursive;
+            font-size: 16px;
         }
         /*SIDEBAR START*/
         #navbar {
@@ -42,32 +43,60 @@
             background-color: #261526;
             /*Disable horizontal scroll.*/
             overflow-x: hidden;
-            padding-top: 20px;
+            padding-left: 16px;
+            padding-right: 16px;
         }
         /*Nav bar header.*/
         #navbar header {
-            padding: 6px 8px 6px 16px;
+            padding: 16px 0px 32px 0px;
             color: #3680d6;
         }
 
         /*Navigation menu links.*/
         #navbar a {
-            padding: 6px 8px 6px 16px;
+            padding-bottom: 32px;
             text-decoration: none;
-            font-size: 24px;
+            font-size: 1.5em;
             color: #4d9a06;
             display: block;
         }
         /*Change color mouse over.*/
         #navbar a:hover {
             color: #75dc16;
+            /*Cheap animation.*/
+            font-weight: bold;
+
         }
+        /*SIDEBAR END*/
+        
         /*Style the page content.*/
         #main-doc {
             /*The same as the navbar.*/
-            margin-left: 200px;
-            padding: 0px 10px;
+            margin-left: 232px;
         }
+        /*Header style for main doc.*/
+        #main-doc header {
+            color: #3680d6;
+            font-weight: bold;
+            padding-bottom: 32px;
+            padding-top: 32px
+        }
+        /*Style for the p's.*/
+        #main-doc p {
+            padding-left: 128px;
+        }
+
+        /*Style for the sub-headers*/
+        .sub-header {
+            color: #4d9a06;
+            padding-left: 64px;
+            padding-bottom: 16px;
+        }
+        /*Style for the list.*/
+        .list {
+            padding-left: 256px;
+        }
+
         /*MEDIA QUERIES TEST*/
         /*@media screen and (max-height: 450px) {
             #navbar {padding-top: 15px;}
@@ -80,7 +109,7 @@
         <!--The navbar-->
         <!--Should be on the left for laptops/desktops/tv's.-->
         <nav id="navbar">
-            <header>Creating a Game Design Document</header>
+            <header>Creating a Game Design Concept</header>
             <a class="nav-link" href="#What's_this_about_?">What's this about?</a>
             <a class="nav-link" href="#High_level_Concept">High Level Concept</a>
             <a class="nav-link" href="#Product_Design">Product Design</a>
@@ -93,21 +122,165 @@
             <!--Section 1, What's this?-->
             <section class="main-section" id="What's_this_about_?">
                 <header>What's this about?</header>
+                <p>In this document I will describe with examples how to create 
+                    a game design concept.<br> A full design document is much longer 
+                    than this one, but it's already a good starting point.</p>
             </section>
             
             <!--Section 2, High Level Concept.-->
             <section class="main-section" id="High_level_Concept">
                 <header>High Level Concept</header>
+                <h4 class="sub-header">Working title</h4>
+                <p>Your game’s title should communicate the gameplay and the 
+                    style of the game.</p>
+                <p>In the following list are some game titles. Try to figure out 
+                    what kind of game it could be, then google it to see if you'
+                    re right. This will increase your gaming culture.
+                </p>
+                <ul class="list">
+                    <li>Vromm</li>
+                    <li>Do You Like Horny Bunnies?</li>
+                    <li>Strong Bad's Cool Game for Attractive People Episode 4:
+                        Dangeresque 3: The Criminal Projective
+                    </li>
+                    <li>Damage: The Sadistic Butchering Of Humanity</li>
+                    <li>AaaaaAAaaaAAAaaAAAAaAAAAA!!!: A Reckless Disregard for Gravity</li>
+                    <li>Greendog: The Beached Surfer Dude!</li>
+                    <li>I have No Mouth, and I must Scream</li>
+                    <li>Super Meat Boy</li>
+                    <li>Dudebro - My Shit is Fucked Up So I Got to Shoot/Slice You 2:
+                        It's Straight-Up Dawg Time
+                    </li>
+                    <li>And yes it Moves</li>
+                    <li>Momma Can I Mow The Lawn</li>
+                    <li>What did I Do to Deserve This, My Lord?</li>
+                    <li>I've got some Balls!</li>
+                    <li>Plumbers Don't Wear Ties</li>
+                    <li>Wild West C.O.W.-Boys of Moo Mesa</li>
+                    <li>Kaboom!</li>
+                    <li>The Space Adventure</li>
+                    <li>Kirby's Epic Yarn</li>
+                    <li>Boing!</li>
+                    <li>Dick Vitale's "Awesome, Baby!" College Hoops</li>
+                    <li>Awesome Possum Kicks Dr. Machino's Butt!</li>
+                    <li>A Space Shooter for 2 Bucks!</li>
+                    <li>Make Your Own Murder Party</li>
+                    <li>Enjoy your massage!</li>
+                    <li>Chili Con Carnage</li>
+                    <li>Ram It</li>
+                    <li>Don't Be Nervous Talking to Girls</li>
+                    <li>B.U.T.T.O.N. (Brutally Unfair Tactics Tottaly OK Now)</li>
+                    <li>Thing Bounces Back</li>
+                    <li>Little Red Riding Hood's Zombie BBQ</li>
+                    <li>Irritating Stick</li>
+                    <li>Which girl should I choose?</li>
+                    <li>Wargasm</li>
+                    <li>Pick up the Phone Booth and Die</li>
+                    <li>Squid Yes! Not So Octopus! Squid Harder!</li>
+                    <li>Minit</li>
+                </ul>
+                <h4 class="sub-header">Concept statement</h4>
+                <p>The game in a tweet: one or two sentences at most that say 
+                    what the game is and why it’s fun.</p>
+                <p>A game concept statement or premise is a brief, direct 
+                    description of the situation of a game. It describes the 
+                    goal of the player, the resistance to this goal and the 
+                    means by which this goal is achieved. If it's all about the 
+                    narrative part of the script, the game concept reads like a 
+                    script. Realistically, the gameplay is described as it 
+                    influences some elements of storytelling. 
+                    A short example could be as follows:</p>
+
+                <p>"In Trick or Treat, players are trapped in the labyrinth of 
+                    an old haunted house, escaping by destroying enemy monsters, 
+                    dodging traps, and solving the maze." Trick or Treat is a 
+                    third-person action-spying game. "</p>
+
+                <p>The purpose of this letter is to give the reader a sense of 
+                    the game. It should answer these basic questions:</p>
+
+                    <ul class="list">
+                        <li>What is the goal of the game?</li>
+                        <li>How is the goal of the game achieved?</li>
+                        <li>What are the challenges to the game?</li>
+                        <li>Where does the game take place?</li>
+                    </ul>
+
+                <p>Most people want to add marketing jargon and implementation 
+                    specifications. That's just a mistake. Reporting that it's 
+                    the best game ever, or that it will be available for the 
+                    PS10 in 2020, simply does not strengthen a concept. 
+                    To put it bluntly: This statement is about the concept. 
+                    Concepts are general terms at a high level. 
+                    For example, the concept of a car on the Indianapolis 500 
+                    did not begin with the use of carbon fiber.</p>
+
+                <p>Do not include the following elements in your letter:</p>
+
+                <ul class="list">
+                    <li>Gaming platform (eg for the NES, because I'm retro-chic)</li>
+                    <li>Game rating (eg "M" for adults)</li>
+                    <li>Special features of the game (eg controls)</li>
+                    <li>Game programming details (using, for example, recursive algorithms for speed)</li>
+                    <li>Marketing (eg "more exciting than a rollercoaster ride")</li>
+                </ul>
+
+                <p>There are exceptions to every rule. Sometimes it is important 
+                    to add implementation details. These are exceptionally rare 
+                    situations, eg. For example, a game designed solely for use 
+                    with a new controller type or for use on a non-standard 
+                    gaming platform. In these cases, it makes sense to touch the 
+                    distinctive detail.</p>
+                <h4 class="sub-header">Genre(s)</h4>
+                <p>Single genre is clearer but often less interesting. Genre 
+                    combinations can be risky. Beware of ‘tired’ genres.</p>
+                <p>The following is a list of all commonly defined video game 
+                    genres.</p>
+                
+                <ul class="list">
+                    <li>Action:<br>Platform games, Shooter games, Fighting games, 
+                        Beat 'em up games, Stealth game, Survival games, 
+                        Battle Royale games, Rhythm games.
+                    </li>
+                </ul>
+                
+                <ul class="list">
+                    <li>Action-adventure:<br>Survival horror, Metroidvania.</li>
+                </ul>
+                
+                <ul class="list">
+                    <li>Adenture:<br>Text adventures, Graphic adventures, 
+                        Visual novels, Interactive movie, Real-time 3D adventures.
+                    </li>
+                </ul>    
+                
+                <ul class="list">
+                    <li>Role-playing:<br>Action RPG, MMORPG, Roguelikes, Tactical RPG,  
+                        Sandbox RPG, JRPG, Monster Collection, First-person party-based RPG.  
+                    </li>
+                </ul>
+
+                <h4 class="sub-header">Target audience</h4>
+                <h4 class="sub-header">Unique Selling Points</h4>
             </section>
             
             <!--Section 3, Product Design.-->
             <section class="main-section" id="Product_Design">
                 <header>Product Design</header>
+                <h4 class="sub-header">Player Experience and Game POV</h4>
+                <h4 class="sub-header">Visual and Audio Style</h4>
+                <h4 class="sub-header">Game World Fiction</h4>
+                <h4 class="sub-header">Monetization</h4>
+                <h4 class="sub-header">Platform(s), Technology, and Scope</h4>
             </section>
             
             <!--Section 4, Detailed and game systems design.-->
             <section class="main-section" id="Detailed_and_Game_Systems_Design">
                 <header>Detailed and Game Systems Design</header>
+                <h4 class="sub-header">Core Loops</h4>
+                <h4 class="sub-header">Objctives and Progression</h4>
+                <h4 class="sub-header">Game Systems</h4>
+                <h4 class="sub-header">Interactivity</h4>
             </section>
             
             <!--Section 5, From here on.-->
