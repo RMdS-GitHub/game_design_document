@@ -82,8 +82,13 @@
             padding-top: 32px
         }
         /*Style for the p's.*/
-        #main-doc p {
+        p {
             padding-left: 128px;
+        }
+
+        /*Style for h4's subtitles.*/
+        #main-doc h4 {
+            color: #06989a;
         }
 
         /*Style for the sub-headers*/
@@ -95,6 +100,13 @@
         /*Style for the list.*/
         .list {
             padding-left: 256px;
+        }
+        .list li {
+            padding-bottom: 8px;
+        }
+        /*Padding for long p's inside list.*/
+        #list-p {
+            padding-left: 0px;
         }
 
         /*MEDIA QUERIES TEST*/
@@ -130,12 +142,13 @@
             <!--Section 2, High Level Concept.-->
             <section class="main-section" id="High_level_Concept">
                 <header>High Level Concept</header>
+                <!--Working title.-->
                 <h4 class="sub-header">Working title</h4>
                 <p>Your game’s title should communicate the gameplay and the 
                     style of the game.</p>
                 <p>In the following list are some game titles. Try to figure out 
-                    what kind of game it could be, then google it to see if you'
-                    re right. This will increase your gaming culture.
+                    what kind of game it could be, then google it to see if you're right. 
+                    This will increase your gaming culture.
                 </p>
                 <ul class="list">
                     <li>Vromm</li>
@@ -179,6 +192,7 @@
                     <li>Squid Yes! Not So Octopus! Squid Harder!</li>
                     <li>Minit</li>
                 </ul>
+                <!--Concept statement.-->
                 <h4 class="sub-header">Concept statement</h4>
                 <p>The game in a tweet: one or two sentences at most that say 
                     what the game is and why it’s fun.</p>
@@ -231,6 +245,7 @@
                     with a new controller type or for use on a non-standard 
                     gaming platform. In these cases, it makes sense to touch the 
                     distinctive detail.</p>
+                <!--Genre-->
                 <h4 class="sub-header">Genre(s)</h4>
                 <p>Single genre is clearer but often less interesting. Genre 
                     combinations can be risky. Beware of ‘tired’ genres.</p>
@@ -242,32 +257,392 @@
                         Beat 'em up games, Stealth game, Survival games, 
                         Battle Royale games, Rhythm games.
                     </li>
-                </ul>
-                
-                <ul class="list">
                     <li>Action-adventure:<br>Survival horror, Metroidvania.</li>
-                </ul>
-                
-                <ul class="list">
                     <li>Adenture:<br>Text adventures, Graphic adventures, 
                         Visual novels, Interactive movie, Real-time 3D adventures.
                     </li>
-                </ul>    
-                
-                <ul class="list">
                     <li>Role-playing:<br>Action RPG, MMORPG, Roguelikes, Tactical RPG,  
                         Sandbox RPG, JRPG, Monster Collection, First-person party-based RPG.  
                     </li>
+                    <li>Simulation:<br>Construction and management simulation, 
+                        Life simulation, Vehicle simulation.
+                    </li>
+                    <li>Strategy:<br>4X game, Artillery game, Auto battler (Auto chess),
+                        Multiplayer online battle arena (MOBA),  Real-time strategy (RTS),
+                        Real-time tactics (RTT), Tower defense, Turn-based strategy (TBS),
+                        Turn-based tactics (TBT), Wargame, Grand strategy wargame.
+                    </li>
+                    <li>Sports:<br>Racing, Sports Game, Competitive, Sports-based 
+                        fighting.
+                    </li>
+                    <li>Other noables genres:<br>Borad game or card game, Casual games,
+                        Digital collectible card game, Horror game, Logic game, MMO,
+                        Mobile game, Party game, Programming game, Trivia game.
+                    </li>
+                    <li>Video game genres by purpose:<br>Advergame, Art game, Casual game,
+                        Christian game, Educational game, Esports, Exergame, Personalized game,
+                        Serious game.
+                    </li>
+                    <li>Multi-Genre:<br>Survival-Action-Adventure, Cross-Genre, 
+                        Narrative-Adventure.
+                    </li>
+                    <li>Sandbox / Open world games:<br>Sandbox, Creative, Open World.</li>
+                    <li>Scientifc studies.</li>
                 </ul>
-
                 <h4 class="sub-header">Target audience</h4>
+                <p>Motivations and relevant interests; potentially age, gender, etc.; 
+                    and the desired ESRB rating for the game.</p>
+                <p>Your game’s target audience is the demographics and interests 
+                of the majority of it’s players. For example if you’re launching 
+                a match-3 puzzle game, your target audience is likely female, 35 
+                years of age, and cares mostly about achievement over all other 
+                aspects of the game.</p>
+                <p>But before you’ve launched your game, before you’ve gathered 
+                any real player data, you’ll need to make an educated guess about 
+                who your players might be, so that you can make and market your 
+                game to attract them. Contrary to popular belief, not all games 
+                benefit from the same marketing channels, tactics and strategies.</p>
+                <p>And investing what little time and money you have on marketing 
+                the wrong way can lead to devastating losses, if not failure.
+                In fact, it’s such an important part of launching games that AAA 
+                publishers spend exorbitant amounts of money building in-house 
+                teams whose sole responsibility is to gather this research and 
+                use it to decide whether or not they should move forward with 
+                even making games that are in the conceptual phases of development.
+                However if you’re a bootstrapping indie game developer, you probably 
+                don’t have access to those teams or their tools. But you still 
+                need some idea of who your target audience is.</p>
+                <p>One of the biggest mistakes that indie game developers make is 
+                believing that their target audience is made up of people who are 
+                just like them. After all, they typically make the games they want 
+                to play. And that’s ok, a lot of great games are made that way, 
+                but it doesn’t necessarily mean your target audience is anything 
+                like you.You and your games are far better served with the more 
+                data-driven approach of measuring the audiences of games that 
+                are similar to yours. 
+                It’s called a lookalike audience, as in your-audience-probably-
+                looks-like-their-audience.
+                    
+                <p>Here’s the gist of what you’ll be doing:</p>
+                <ul class="list">
+                    <li>The first thing you’ll do is make a list of your game’s 3 biggest competitors.</li>
+                    <li>Then you mine their audiences for demographics and interests, documenting the results along the way.</li>
+                    <li>And finally you’ll note the overlap to find your game’s tentative target audience.</li>
+                </ul>
+                <p>I call this the Lookalike Target Audience Research Method. Obviously, 
+                    it’s not rocket science. It’s just common sense, and you’ve 
+                    probably already been thinking this way. Unfortunately, there’s 
+                    no empirical way to prove your game’s target audience before 
+                    you launch. All assumptions, by you or big AAA publishers, 
+                    are still assumptions. Building a target audience profile 
+                    from competitor data is the best way to make a best guess 
+                    about who your game’s target audience might be.
+                    And that’s really all you need to move forward with.</p>
+                    
+                <p>You don’t really need teams of people, data warehouse 
+                    subscriptions, and keynote presentation decks being pitched 
+                    to people in suits. Sure, those help. But they’re nice-to-haves, 
+                    and not really need-to-haves for where you’re at.</p>
+
+                <p>Here are some stats about the demographics of video games in the US and the world:</p>
+                <ul class="list">
+                    <li>There are more than 2.5 billion gamers around the world.</li>
+                    <li>65% of American adults play video games daily.</li>
+                    <li>64% of US households own a device that they use to play video games.</li>
+                    <li>There are 2 gamers in each game-playing household in the US.</li>
+                    <li>The average gamer is 34 years old, owns a house and has children.</li>
+                    <li>Men are 3X more likely to purchase a game than women.</li>
+                    <li>Smartphones and smartwatches are expected to own 34% of the 
+                        gaming market by the end of 2019.</li>
+                    <li>72% of gamers are 18 or older.</li>
+                    <li>45% of US gamers are women.</li>
+                    <li>70% of parents say video games have a positive influence 
+                        on their child’s life.</li>
+                    <li>67% of parents play video games with their child at least 
+                        once a week.</li>
+                    <li>56% of the most frequent gamers play multiplayer games.</li>
+                    <li>35% of multiplayer gamers prefer shooter games.</li>
+                    <li>The gaming industry reached a global market size of $135 
+                        billion in 2018. It’s expected to increase to $196 billion in 2025.</li>
+                    <li>36 years is the average age of a game purchaser.</li>
+                    <li>People aged 18-24 are most likely to purchase a game.</li>
+                    <li>People with high school diplomas or higher are more likely 
+                        to make a video game purchase.</li>
+                    <li>66% of people say the quality of the graphics is important 
+                        when choosing a game to purchase.</li>
+                    <li>79% of game purchases are in digital format.</li>
+                    <li>Mobile gaming revenue is expected to amount to 57% of the 
+                        total gaming revenue by 2021.</li>
+                    <li>There are 209.5 million mobile phone gamers in the US in 
+                        2019.</li>
+                    <li>82% of the digital games revenue comes from free-to-play games.</li>
+                    <li>People with a yearly income, higher than $90,000, are 
+                        less likely to buy games.</li>
+                    <li>Dentists are least likely to purchase a video game.</li>
+                    <li>65% of US women ages 10-65 play mobile games.</li>
+                    <li>US 92% of 2-17 year olds play video games.</li>
+                    <li>UK 99% of 8-15 year olds play video games.</li>
+                </ul>
+                
+                <p>As for the ratings there are different self-regulatory organizations 
+                   in the world. The most known are, the ESRB (North America),
+                   PEGI (Most European countries, India, Israel, Pakistan, South America).
+                   A lot of countries and companies like App Store and Google Play
+                   have their individual ratings.</p>
+                <!--Unique Selling Points-->
                 <h4 class="sub-header">Unique Selling Points</h4>
+                <p>Critically important. What makes your game stand out? How is 
+                    it different from all other games?</p>
+                <p>With this in mind, you can start to build your USP (Unique Selling Points).
+                    There is not an unique definition for it, the best statements
+                    that I found for the video game industry are these.</p>
+                <ul class="list">
+                    <li>Each advertisement must make a proposition to the 
+                              consumer—not just words, product puffery, or show-window 
+                              advertising. 
+                              Each advertisement must say to each reader: "Buy this 
+                              product, for this specific benefit."</li>
+                    <li>The proposition must be one the competition cannot or 
+                              does not offer. It must be unique—either in the brand 
+                              or in a claim the rest of that particular advertising 
+                              area does not make.</li>
+                    <li>The proposition must be strong enough to move the masses, 
+                              i.e., attract new customers.</li>
+                </ul>
+                <p>You can now move on to the positioning part.</p>
+                <ul class="list">
+                    <li>For (target customer) who (statement of the need or 
+                              opportunity), the (product name) is a (product category) 
+                              that (statement of key benefit – that is, compelling 
+                              reason to buy). Unlike (primary competitive alternative), 
+                              our product (statement of primary differentiation).
+                    </li>
+                </ul>
+                <p>This could be translated into “For (young, jaded hipster who 
+                        grew up liking games) who (now feels that games have strayed 
+                        too far into the mainstream), (Unbearable Sounds and 
+                        Glitchy Graphics) is a (shit game) that (no one else have 
+                        played or will play except one lonely Brooklyn developer who 
+                        in fact also developed this game). Unlike (Call of Dogs), 
+                        this game (will make you feel unique).”</p> 
+                <p>Remove the snarkiness and you can easily see how this 
+                        complements/works in mysterious ways with the USP definition. 
+                </p>
+                <p>To define your USP these are the things you need to think about.</p>
+                <ul class="list">
+                    <li>Who are you as a studio?:<br>Start by creating an overview 
+                        of your development studio. Highlight the ideas that you 
+                        stand for, your strengths and weaknesses. Assess your development 
+                        team to see what extra skills and technologies you need to 
+                        invest in to ensure you can meet the development needs 
+                        of modern games.
+                    </li>
+                    <li>What does your game do to fill a role in the gaming industry?<br>
+                        You don’t necessarily have to be a pioneer in the industry 
+                        for your game to be successful. There are a lot of games 
+                        that are built on the success of other titles and the secret 
+                        has been to find a role in a specific niche and play it well. 
+                        Work with your development team to find the issues your 
+                        target audience needs to be addressed and craft a USP 
+                        that signifies your promise to address those issues.
+                    </li>
+                    <li>What part of your game addresses that niche?<br>Make it 
+                        clear what part of your game addresses the pain points 
+                        gamers experience when playing titles in your niche. 
+                        This will make your game relatable and entice more players 
+                        to try it out.
+                    </li>
+                    <li>Why is your game different from the competition?<br>Your 
+                        USP should highlight what makes your game different from 
+                        the competition. Gamers value authenticity and your USP 
+                        should clearly point out the factors that make your game 
+                        unique. The main role of your USP is to give reasons why 
+                        prospects should download your game, and stating the 
+                        unique issues that make it different from the competition 
+                        will help generate more interest.
+                    </li>
+                    <li>Why are these reasons better than what the competition does?<br>
+                        Stating what makes you different from the competition is 
+                        not enough. You need to show how your game’s uniqueness 
+                        is good for your audience. By matching your USP with the 
+                        specific needs of gamers in your niche, the value your 
+                        game brings to the prospects becomes evident, and this 
+                        will help you persuade them to choose you over the competition.
+                    </li>
+                    <li>Who is it aimed at?<br>To effectively convey the competitive 
+                        advantage of your game you, first of all, have to know 
+                        your audience. Understanding the goals and desires of 
+                        your target users will make it easy to come up with a USP 
+                        that will immediately capture their attention. If you 
+                        don’t have a clear description of your target users, 
+                        check out your competitors to see what kind of people 
+                        they are targeting with their marketing messages.
+                    </li>
+                    <li>Why should they care?<br>For people to care about your 
+                        game, it needs to show authentic value and give your 
+                        players something they want. The gaming industry is 
+                        highly saturated and for gamers to even glance your way, 
+                        your game needs to satisfy the above criteria. 
+                        Game marketing experts advise that developers sit down 
+                        with everyone involved with the game and list all the 
+                        issues that may influence gamers to choose their title 
+                        over the competition in the industry.
+                    </li>
+                </ul>
             </section>
-            
             <!--Section 3, Product Design.-->
             <section class="main-section" id="Product_Design">
                 <header>Product Design</header>
+                <!--Player Experience and Game POV-->
                 <h4 class="sub-header">Player Experience and Game POV</h4>
+                <p>Who is the player? What is the setting? What is the fantasy 
+                    the game grants the player? What emotions do
+                    you want the player to feel? What keeps the player engaged 
+                    for the duration of their play?</p>
+                <p>To describe the player experience I found an article from an
+                    UX designer that create a model specific for gaming.
+                    In his model there are 5 planes, motivation,meaningful choices,
+                    balance, usability, aesthetics.
+                <p>The model also serves as a process map. The planes are arranged 
+                    in the sequence in which they would ideally be tackled, 
+                    starting from the reasons for playing, progressing through 
+                    the core mechanics of the game, and finishing with the surface 
+                    level experience. There's little point in designing for the 
+                    next plane until the prior one has at least been adequately 
+                    thought through (although work on the later planes will almost 
+                    always lead to iterations on the earlier ones). Designers can 
+                    run into trouble if they skip over planes or start 
+                    from the wrong end.</p>
+                <ul class="list">
+                    <li>Motivation:<br><p id="list-p">The first thing to think about is who 
+                        the players are and why they would want to play the game. 
+                        This plane comprises two main elements. In the short term, 
+                        there's the up-front “interestingness” of the experience—the 
+                        basic spark that grabs people and creates joy in the interaction. 
+                        In Pac-Man, this is the race to clear the board while being 
+                        pursued by enemies. In CityVille, it's the combination of 
+                        creative control over the city and the challenge of managing 
+                        its growth. In checkers and chess, it's the puzzle of 
+                        figuring out how to attack your opponent while defending 
+                        your own positions. These are all tied to basic human 
+                        drives to complete a job, to create, and to feel competent, 
+                        which are just a handful of the many motivations that 
+                        make play a fundamental function of living.</p>
+
+                        <p id="list-p">The second element of motivation is the system of rewards 
+                        that sustains interest in the experience over time. 
+                        Pac-Man has points and leaderboards. CityVille offers 
+                        access to an expanding set of game items, coupled with a 
+                        social experience shared among a growing circle of friends. 
+                        In checkers and chess, it's the satisfaction of proving 
+                        that you're cleverer than your opponent. Rewards become 
+                        increasingly important the longer a game runs, but they 
+                        can also grow stale as the player gets used to receiving 
+                        them. For very long engagements, diversifying and layering 
+                        rewards can persuade players to stay involved.</p>
+                    </li>
+                    <li>Meaningful choices:<br>
+                        <p id="list-p">
+                        The next plane defines how the game's 
+                        structure and rules allow players to exercise choices 
+                        that influence the outcomes of events. Such meaningful 
+                        choices are present in all good games, though they can 
+                        take quite different forms. Chess relies heavily on 
+                        long-term strategy—the anticipation of what will happen 
+                        far downstream when you take a move now. Twitchy action games 
+                        typically involve more short-range tactical decisions, 
+                        which are completed rapidly and in high volumes at the 
+                        fine-motor level.</p>
+                        <p id="list-p">
+                        The challenge of consistently making better moves is the 
+                        fundamental conflict that makes play engaging. Games work 
+                        best when there's a partial ambiguity between which actions 
+                        will result in better or worse outcomes. They can easily 
+                        lose their appeal when players either have no basis for 
+                        distinguishing between choices (too much ambiguity), or 
+                        when there's clearly only one choice that has any real 
+                        merit (no ambiguity at all).</p>
+                    </li>
+                    <li>Balance:<br>
+                        <p id="list-p">This is the extent to which the game's elements 
+                            work in combination to create a system that's 
+                            appropriately challenging, but which players still 
+                            perceive as fair and equitable. In an unbalanced role 
+                            playing game, for example, players might earn gold so 
+                            easily from battles that they can purchase the most 
+                            advanced weapons and armor right away for use against 
+                            the weakest enemies. On the other hand, if they earned 
+                            too little gold then the game would demand too much work 
+                            of them and become frustrating.</p>
+                        <p id="list-p">Video games contain multiple variables for 
+                            which there is some range of values that need to be 
+                            set so they're not too high or too low, but just right. 
+                            But games are dynamic systems, and the interplay of 
+                            these variables can be very complex and hard to 
+                            completely anticipate. Even if a game works really 
+                            well in a few scenarios, there may be lots of edge 
+                            cases where it goes completely haywire and the 
+                            experience becomes unsatisfying. The best way to 
+                            ensure a balanced game is through iterative prototyping 
+                            and testing, allowing the problems to emerge from actual 
+                            play.</p>
+                    </li>
+                    <li>Usability:<br>
+                        <p id="list-p">While this plane certainly includes all 
+                            of the interface concerns that we know so well in 
+                            the UX world, there are also usability considerations 
+                            that are specific to game experiences. Importantly, 
+                            the design needs to support a sensible experience, 
+                            where players understand the things that happen in 
+                            the game and how their actions affect them.</p>
+                        <p id="list-p">This means that when players lose they 
+                            should understand why they lost, and when they win 
+                            they should understand why they won. When something 
+                            happens in the game, players should be able to 
+                            attribute it to a cause that they can perceive and 
+                            understand. Players should also always be able to 
+                            understand the actions that are available to them, 
+                            as well as the objectives they should be working 
+                            toward (or they should at least have a reasonable 
+                            opportunity to figure them out). These are the 
+                            qualities that enable a feeling of control over the 
+                            experience in the short term, and that allow players 
+                            to develop mastery of the game over time.</p>
+                    </li>
+                    <li>Aesthetics:<br>
+                        <p id="list-p">The last plane encompasses the many 
+                            aspects of the game's aesthetic design. In the short 
+                            term there's the direct sensory experience, which 
+                            includes images sound as well as the haptics of force 
+                            feedback and vibrating game controllers. Stylistic 
+                            choices in writing and art set the game's tone—whether 
+                            funny, serious, foreboding, or silly. Many games also 
+                            contain more contemplative elements that unfold over 
+                            the long term, such as narratives with evolving story 
+                            arcs.</p>
+                        <p id="list-p">A game's aesthetics can be readily changed 
+                            without affecting the underlying mechanics governing 
+                            play. You can swap standard black and white chess pieces 
+                            out with civil war, ancient Chinese, or Star Trek figures, 
+                            but you're still playing chess. So it's important that the 
+                            underlying planes of the experience are sound, no matter 
+                            how glossy the surface is.</p>
+                        <p id="list-p">Nonetheless, the aesthetic has a profound 
+                            impact on the player's experience of the game. 
+                            You can't peel the artful qualities of Red Dead 
+                            Redemption or Plants vs. Zombies away from their game 
+                            mechanics without completely changing each one's effect.
+                    </li>
+                    <li>What about fun?
+                        <p id="list-p">You might be wondering how enjoyment and 
+                            fun factor into this model. Those qualities can't be 
+                            designed directly, but rather emerge from the experience 
+                            when all of the elements work together well. 
+                            Conversely, fun dies when any of the planes haven't 
+                            been adequately addressed.</p>
+                    </li>
+                </ul>
+                </p>
                 <h4 class="sub-header">Visual and Audio Style</h4>
                 <h4 class="sub-header">Game World Fiction</h4>
                 <h4 class="sub-header">Monetization</h4>
@@ -290,3 +665,24 @@
          </main>
     </body>
 </html>
+          
+
+             
+            
+
+           
+            
+
+     
+          
+
+         
+             
+                
+          
+                
+     
+                
+     
+    
+
