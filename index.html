@@ -798,7 +798,7 @@
                     viewpoint is taken from the side, and the onscreen characters 
                     generally can only move, to the left or right. Games of this type 
                     make use of scrolling computer display technology, and sometimes 
-                    parallax scrolling to suggest added depth. Examples of side-scrolling 
+                    parallax scrolling to suggest added depth.<br>Examples of side-scrolling 
                     games include platform games such as Sonic the Hedgehog and 
                     Ori and the Blind Forest, beat 'em ups such as the popular 
                     Double Dragon and Battletoads, and shooters such as R-Type and 
@@ -810,19 +810,19 @@
                     techniques that try to "fake" three-dimensionality, typically 
                     by using some form of parallel projection, wherein the point of 
                     view is from a fixed perspective, but also reveals multiple 
-                    facets of an object. Examples of pseudo-3D techniques include 
+                    facets of an object.<br> Examples of pseudo-3D techniques include 
                     isometric/axonometric projection, oblique projection, orthographic 
                     projection, billboarding, parallax scrolling, scaling, skyboxes, 
                     and skydomes. In addition, 3D graphical techniques such as 
                     bump mapping and parallax mapping are often used to extend the 
                     illusion of three-dimensionality without substantially increasing 
                     the resulting computational overhead introduced by increasing the 
-                    polygon count. Examples of games that make use of pseudo-3D 
+                    polygon count.<br> Examples of games that make use of pseudo-3D 
                     techniques include Zaxxon, The Sims and Diablo 
                     (isometric/axonometric projection); Ultima VII and Paperboy 
                     (oblique projection); Sonic the Hedgehog and Street Fighter II 
                     (parallax scrolling); Fonz and Space Harrier (scaling); and Half-Life 2 
-                    (skyboxes). In addition to axonometric projection, games such as 
+                    (skyboxes).<br> In addition to axonometric projection, games such as 
                     The Sims and Final Fantasy Tactics also make use of a combination 
                     of pre-drawn 2D sprites and real-time polygonal graphics instead 
                     of relying entirely on 2D sprites as is the norm.  
@@ -1421,61 +1421,678 @@
                 content the team needs. Production ends when the schedule says it does. 
                 Once the scheduled time is done, the game is called Feature Complete, 
                 and development transitions into the Alpha phase.</p>
-                <p>Alpha (green) is when the development team focuses on stability 
-                    and bug fixing, and stop adding new systems, features, and content. 
-                    A lot of the systems and features that were built during the 
-                    Production phase are not fully functional. The systems generally 
-                    work ~90% of the time, but the remaining 10% are comprised of 
-                    edge cases that just weren’t expected early on. This is what 
-                    the team focuses on fixing during the Alpha phase. During this 
-                    phase, you often have what’s called a Burndown chart - every day, 
-                    QA will find and enter a certain number of bugs. The developers 
-                    usually have to fix more bugs each day than QA can find in order 
-                    to approach zero bugs project-wide. There generally isn’t new 
-                    feature or content work being done during Alpha, that’s why it 
-                    is feature complete. It’s only fixing bugs, fixing crashes, 
-                    making things smoother and flow better, and improving performance. 
-                    More content cutting occurs at this phase as well - things that 
-                    can’t be done in time, or will require more work than the team 
-                    has time for. Sometimes it’s because the particular developers 
-                    who own the feature are just swamped, and it would take too long 
-                    to train someone else to help share the burden. As the game 
-                    hardens and becomes more stable, the leadership will begin 
-                    locking down certain sections of the game to keep them stable 
-                    so that new bugs are not introduced. Levels, systems, sounds, 
-                    art assets, etc. around this time start getting locked down. 
-                    This lockdown leads to the Beta phase.
-                </p>
-                <p>The Beta phase is where the game is considered “content complete” - 
-                    no new content allowed at all. The only thing that is done 
-                    is fixing of existing bugs, and the lower priority bugs tend 
-                    to get put on the wishlist or marked as ‘shippable’. At this 
-                    point stability is the most valuable thing. The leadership on 
-                    the project has to carefully evaluate what goes in, and how 
-                    risky the fixes are. This is often where the nastier hacks in 
-                    the game get made, because the hacks are smaller and localized 
-                    to fix a very specific problem rather than the “correct” fix 
-                    at the root of the issue, simply because the hack affects 
-                    significantly less in the grand scheme of things. Beta ends 
-                    when the team has a final submission candidate, and the team 
-                    enters the Final phase.
-                </p>
-                <p>The final phase is about where most 
-                    of the team used to idle at work, waiting for the results of 
-                    the certification process. Nowadays, members of the team get 
-                    transitioned to work on extra content, patch fixes, or other 
-                    projects in development at this point, while the smaller core 
-                    team works on the critical cert-threatening issues.</p>
-
-
-            
-            
-            
+            <p>Alpha is when the development team focuses on stability 
+                and bug fixing, and stop adding new systems, features, and content. 
+                A lot of the systems and features that were built during the 
+                Production phase are not fully functional. The systems generally 
+                work ~90% of the time, but the remaining 10% are comprised of 
+                edge cases that just weren’t expected early on. This is what 
+                the team focuses on fixing during the Alpha phase.<br> During this 
+                phase, you often have what’s called a Burndown chart - every day, 
+                QA will find and enter a certain number of bugs. The developers 
+                usually have to fix more bugs each day than QA can find in order 
+                to approach zero bugs project-wide. There generally isn’t new 
+                feature or content work being done during Alpha, that’s why it 
+                is feature complete.<br>It’s only fixing bugs, fixing crashes, 
+                making things smoother and flow better, and improving performance. 
+                More content cutting occurs at this phase as well - things that 
+                can’t be done in time, or will require more work than the team 
+                has time for. Sometimes it’s because the particular developers 
+                who own the feature are just swamped, and it would take too long 
+                to train someone else to help share the burden. As the game 
+                hardens and becomes more stable, the leadership will begin 
+                locking down certain sections of the game to keep them stable 
+                so that new bugs are not introduced. Levels, systems, sounds, 
+                art assets, etc. around this time start getting locked down. 
+                This lockdown leads to the Beta phase.
+            </p>
+            <p>The Beta phase is where the game is considered “content complete” - 
+                no new content allowed at all. The only thing that is done 
+                is fixing of existing bugs, and the lower priority bugs tend 
+                to get put on the wishlist or marked as ‘shippable’. At this 
+                point stability is the most valuable thing. The leadership on 
+                the project has to carefully evaluate what goes in, and how 
+                risky the fixes are. This is often where the nastier hacks in 
+                the game get made, because the hacks are smaller and localized 
+                to fix a very specific problem rather than the “correct” fix 
+                at the root of the issue, simply because the hack affects 
+                significantly less in the grand scheme of things. Beta ends 
+                when the team has a final submission candidate, and the team 
+                enters the Final phase.
+            </p>
+            <p>The final phase is about where most 
+                of the team used to idle at work, waiting for the results of 
+                the certification process. Nowadays, members of the team get 
+                transitioned to work on extra content, patch fixes, or other 
+                projects in development at this point, while the smaller core 
+                team works on the critical cert-threatening issues.</p>
+                
             <!--Section 4, Detailed and game systems design.-->
             <section class="main-section" id="Detailed_and_Game_Systems_Design">
                 <header>Detailed and Game Systems Design</header>
                 <h4 class="sub-header">Core Loops</h4>
-                <h4 class="sub-header">Objctives and Progression</h4>
+                <p class="ex">How do game objects and the player’s actions form loops? 
+                    Why is this engaging? How does this support
+                    player goals? What emergent results do you expect/hope to see? 
+                    If F2P, where are the monetization points?
+                </p>
+                <h5 class="sub-sub-header">Core Loops, Explanation</h5>
+                <p>A loop is how a game determines the results of an action and 
+                   feeds that result back to a player. Players are usually the 
+                   initiators of loops but, in videogames especially, characters 
+                   may also initiate their own loops. An enemy taking a shot at 
+                   you is trying to win, just as you are.
+                </p>
+                <p>Loops all have a the same structure: The player performs an action, 
+                    the results of that action are determined according to rules, 
+                    states of different resources in the environment are updated 
+                    according to the outcome. The loop closes with one of two results, 
+                    win or loss, and the player may have the option to take further actions.
+                </p>
+                <p>Some loops are closed immediately, where others are hours or even 
+                    days long. Loops are also differently arranged. In some games 
+                    like Bejeweled they are strictly sequential. In others they 
+                    are concurrent or interweaved. In some turn-based boardgames 
+                    that separate move and resolution phases, the player sometimes 
+                    makes a number of actions that all stack up, waiting for a set 
+                    of loops to all be resolved at the end. In others they operate 
+                    in harmony, or even simultaneously, between players. Some games 
+                    let the player initiate loops at their own pace, while others 
+                    operate at either the game’s pace or that of other players.
+                </p>
+                <p>Loops are subject to both synchrony and temporany, leading to 
+                   four classes of loop: single (asynchronous, atemporal), multiple 
+                   (synchronous, contemporal), serial (synchronous, atemporal) and 
+                   parallel (asynchronous, contemporal). In successful games, loops 
+                   cluster to form repeatable dynamics, and so become fascinating 
+                   in the long term. In poor games, this clustering either does 
+                   not happen or happens badly. 
+                </p>
+                <p>The psychology of the open loop is very important to understanding 
+                    why games are engaging. The play brain remembers and is agitated 
+                    by actions left unfinished, and the reside more presently in 
+                    memory than past occurrences. The analogy of waiters remembering 
+                    the status of all of their tables is apt in this regard. Each is 
+                    an open loop, a question to be answered and learned from. </p>
+                
+                <h5 class="sub-sub-header">Core Loops, How to Perfect Them, Intro</h5>
+                <p>At the heart of your game’s design, there are core mechanics, 
+                    and the core gameplay loop. In short, it’s the main activities 
+                    that structure the entire design and the players engage into 
+                    repeatedly, in a looping sequence. It’s part of the essence 
+                    of the game, something you cannot remove without fundamentally 
+                    altering the experience.
+                </p>
+                <p>In the original Mario, this would be walking, running and jumping. 
+                   The various enemies, bosses, and environments stem from the core mechanics. 
+                   They are here to surprise the player, challenge his skills and 
+                   keep the experience fresh. In other words: to exploit the core 
+                   loop to its fullest, and add extra depth to the experience.
+                </p>
+                <p>There are several loops that structure your projects, depending 
+                    on the lenses you use. Just like there’s a core gameplay loop, 
+                    there are core economic loops that will derive from your business 
+                    models (or vice-versa), level design loops, what the player must 
+                    do to beat a level and advance in the game’s main plot, etc. 
+                    Game loops also depend on the timeframe you focus on. 
+                    They exist on a moment-to-moment basis, can last a few minutes, 
+                    etc. They echo the player’s short, mid and long-term goals. E.g. 
+                    Collecting coins, beating the level, reaching and beating the end boss.
+                </p>
+                <p>We’ll focus on the core gameplay loop here: the one that serves as a 
+                    foundation to your game’s design.</p>
+                <p>The core gameplay loop is comprised of some of the basic actions 
+                    players can take at any point in time, the main mechanics. 
+                    We expect the player to use them at a certain frequency and 
+                    conceptually arrange them in a cycle. That’s run and jump in a 
+                    runner, swap gems and plan in a match-3, etc. Take a rogue-like: 
+                    the core gameplay loop might resemble something like walk, attack, 
+                    collect. That’s what you keep doing from moment to moment.
+                </p>
+                <p>At the same time, the users have higher-level goals that build 
+                    upon the lower-level ones. A higher-level game loop might be:
+                <ol class="list">
+                    <li>Enter a new room (discover its content).</li>
+                    <li>Kill all the enemies.</li>
+                    <li>Get rewards.</li>
+                </ol>
+                </p>
+                <p>The core loop is the lowest-level one. In the rogue-like example, 
+                    it builds upon the basic actions players can use to take 
+                    meaningful decisions: the game’s central mechanics. Should 
+                    I walk around this enemy and avoid it, or attack it for some 
+                    extra experience, even if I risk dying in the operation? 
+                    Other loops will most of the time stem from or build upon it. 
+                    Think of elements like scoring, special combos, and any 
+                    mechanic that’s not necessary for the game to be enjoyable.
+                </p>
+                <p>2 games might have exact same core loop and feel completely 
+                    different in the end. We’re talking about an essential part 
+                    of the game, yet that’s only a tiny part of it.
+                </p>
+                <h5 class="sub-sub-header">Core Loops, How to Perfect Them, The core loop for all it’s worth</h5>
+                <p>The more the player has to go through the loop, the more its 
+                    quality will affect your game’s retention. On mobiles or on 
+                    the web, if the main mechanics aren’t intuitive, the controls 
+                    not polished, you’ll lose them within a minute or two. People 
+                    will give you a single chance to entertain them.
+                </p>
+                <p>What experience do you want to deliver? What’s unique, essential 
+                    to it? The core gameplay loop is the heart of your game. It is 
+                    at the heart of the experience you offer. It’s not just what 
+                    the player does repeatedly: your core mechanics are a foundation 
+                    of your design, that will influence the project’s entire lifecycle. 
+                    All aspects of a game’s design are interconnected, and so are 
+                    the various loops that compose it.
+                </p>
+                <p>Loops build upon one another with a parent-child relationship, 
+                    stem from one another, intersect or play in parallel. In the 
+                    recent Rayman series, the lums aren’t only collectibles: they 
+                    often outline an ideal route to follow, or teach the players 
+                    new combos, new loops they’ll need later in the level. You 
+                    can view them as a single mechanic that is part of different 
+                    game loops.
+                </p>
+                <p>The way the enemies behave, the level design, the graphics and 
+                    even the sounds will all work together to reinforce the game’s 
+                    core. 
+                </p>
+                <p>In an insightful article on loops and arcs, designer Daniel Cook 
+                    argues that loops give you a better understanding of the systems’ 
+                    complexity and its interconnected parts. That’s what he calls 
+                    “wisdom”. A good loop teaches the player about the game. 
+                    Thus, the better you understand them, the more precisely you 
+                    can tweak them and make them as intuitive as possible.
+                </p>
+                <h5 class="sub-sub-header">Core Loops, How to Perfect Them, So what's a good core loop?</h5>
+                <p>A good core loop should be able to put the player in state of flow. 
+                    You want him to be fully engaged in the game: nothing should 
+                    distract the user’s attention from the task at hand. And at 
+                    the same time, you need to provide a fair challenge. People 
+                    like to feel in control, to face situations that are neither 
+                    too easy or too hard on them.
+                </p>
+                <p>As your users have different levels of experience, this is easier 
+                    said than done. First, you can’t make it work for them all, 
+                    so you’ll have to pick a target audience to design for. 
+                    Then, it will require many iterations.
+                </p>
+                <h5 class="sub-sub-header">So what's a good core loop?, A clear goal</h5>
+                <p>You should give the player one main objective. One that is not 
+                    always explicit, but that we at least intuitively understand 
+                    from the mechanics and the game world. Take the widely popular 
+                    variation of Flappy Bird: Don’t Touch the Spikes. As with many 
+                    One Touch games, there is no story or text-based tutorial to 
+                    teach you how to play.
+                </p>
+                <p>The game and its story are fused together and your first session 
+                    serves as a smart, implicit guide. The bird flaps once when you 
+                    touch the title screen, then falls. That’s your first interaction 
+                    with the core gameplay loop: flap and fall. Spikes spawn on the 
+                    wall in front of you, and their triangular shape tells you they’re 
+                    dangerous. Even without the app’s title, we naturally understand what 
+                    we are supposed to do: avoid the spikes for as long as possible.
+                </p>
+                <h5 class="sub-sub-header">So what's a good core loop?, Keep It Short and Sweet</h5>
+                <p>The core loop should ideally be intuitive, yet offer a lot of 
+                    opportunities to expand the gameplay with new obstacles and 
+                    level design patterns.
+                </p>
+                <p>Let’s look at a more complex one: in Flinthook, you run, jump, 
+                    aim, shoot and hook on to rings to reposition faster or move 
+                    from one screen to the next. The loop has more actions than 
+                    the others above. You have more controls to combine and learn. 
+                    We can safely say the target audience is people who already 
+                    enjoy rogue-likes and platformers; slightly experienced players.
+                </p>
+                <p>Those persons know how to move, jump, control a character in the air, 
+                    but they should also understand how to aim and shoot. The only 
+                    brand-new mechanic should be the hook. The game is still fast-paced 
+                    and quite complex, so the developers give you the option to slow 
+                    down time for a few seconds.
+                </p>
+                <p>We are often aiming for an easy to grasp and hard to master 
+                    core loop, although this isn’t possible in every project 
+                    (think about simulations). I highly recommend exploring One 
+                    or Two-Button games, and widely popular mobile titles. Even 
+                    if they don’t resonate with your work, they give us great 
+                    examples of subtractive or minimalistic design.
+                </p>
+                <h5 class="sub-sub-header">So what's a good core loop?, Build upon a strong theme</h5>
+                <p>Games tend to be perceived as pure forms of entertainment. 
+                    Yet, any design revolves around and supports a theme. It does 
+                    not necessarily relate to a story or a message you’d want to share. 
+                    Think of it as the concept or idea that unifies all your design 
+                    choices into a coherent whole. A short sentence that capture’s 
+                    your game’s essence. The aesthetics, the story, the way it plays 
+                    should work together to reinforce the theme. It bounces back to 
+                    a key design principles: Harmony, or Unity.
+                </p>
+                <p>As a professional, to build the framework for the specific experience 
+                    you have in mind, you want to be in control of your design. You want 
+                    to understand precisely what you want to deliver to the players. 
+                    It could be a game that explores all the possibilities offered by a 
+                    jump, focusing the entire experience on that one mechanic.
+                </p>
+                <p>Forza 2 tried to be an accessible, yet a complete racing car simulation. 
+                    A tough challenge the developers overcame beautifully. Journey could 
+                    be an allegory of one’s life cycle, from birth to death, or a game 
+                    that brings people to care about and support each other in life. 
+                    It’s hard to pinpoint exactly what the game is meant to be about: 
+                    after all, the theme is a tool for the creators. A unified design doesn’t 
+                    force its theme onto you. Instead, as the player, you can relax and 
+                    fully enjoy the experience.
+                </p>
+                <h5 class="sub-sub-header">Core Loops, How to Perfect Them, Design, prototype, evaluate</h5>
+                <p>You’ll establish your core loop during pre-production. And I mean Marc 
+                    Cerny’s pre-production, as he introduced with The Method. It encompasses 
+                    all the iterations on your game until you have a few finished levels, 
+                    and enough material to precisely plan the rest of production. 
+                    This vision not only helps to budget your project: it emphasizes 
+                    the need for many iterations and their high cost.</p>
+                <p>A good core loop isn’t born from an idea you implement once and build upon. 
+                    As with any design, it sprouts and evolves through 
+                    successive iterations. In short:
+                    <ol class="list">
+                        <li>Pick an idea that has potential.</li>
+                        <li>Build a prototype to test it out.</li>
+                        <li>Evaluate the depth you can get off your implementation, 
+                            the improvements and changes it requires.</li>
+                    </ol>
+                </p>
+                <p>Start over, and build upon what you have if it corresponds to 
+                    the experience you wish to deliver.
+                </p>
+                <h5 class="sub-sub-header">Design, Prototype, Evaluate, Getting started with iterations</h5>
+                <p>
+                    In practice, I start a project with a short document, around 
+                    1 to 3 pages long, with a few pictures. It includes a rough 
+                    theme, a core loop, the target audience, a few paragraphs on 
+                    how the game might play, a short synopsis, what technology 
+                    it relies on, etc. Only the essential information to get the 
+                    team on the same page.
+                </p>
+                <p>Then, I get to work on the first gameplay prototype. I recommend 
+                    producing a playable version of the game as soon as possible, 
+                    to get at least a sense for the experience that you are building. 
+                    There is always a gap between what we think the game will feel 
+                    like, and how it plays in practice. And you can’t know all the 
+                    pitfalls of your design without testing. You’ll have to bump 
+                    into some of them through pre-production and make changes 
+                    moving forward. That’s why I like to get moving as soon as 
+                    possible.
+                </p>
+                <p>The initial design might not work. Concept artists can draw 
+                    dozens of thumbnails before they produce the one that will 
+                    become a finished piece. Each thumbnail offers a different 
+                    design or a variation of a design idea. Prototypes are similar. 
+                    They help you evaluate your ideas before you spend too much 
+                    time (and money!) on them. If a prototype doesn’t work, it still 
+                    teaches you valuable lessons you’ll apply on the next one.
+                </p>
+                <p>Prototypes are where you learn the most. Each prototype should 
+                    have a specific goal, answer a precise question, be it technical 
+                    or design-related. “Is the ability to dash and double jump balanced, 
+                    and fun to play?” “Is the current control scheme easy to learn 
+                    for a kid?” Etc.
+                </p>
+                <p>Create successive prototypes, each focusing on one specific 
+                    aspect of the game, and more importantly, evaluate the results.
+                </p>
+                <h5 class="sub-sub-header">Design, Prototype, Evaluate, Analyze each iteration</h5>
+                <p>You not only need your mechanics to be rock-solid: you want to 
+                    exploit them as deeply as you can. Thus, to perfect your core loop, 
+                    you also must polish other aspects of the game. That’s why as 
+                    you iterate, you need to assess how the design evolved since 
+                    the previous step, if you reached your objective, and whether 
+                    the mechanics have the potential you expected.
+                </p>
+                <p>From a designer’s point of view, the ideal core loop is both 
+                    intuitive and offers an infinite amount of playful opportunities, 
+                    or depth. A jump of varying length, combined with some wall 
+                    sliding, as explored by super meat boy, is a decent example. 
+                    I believe we achieve these by subtracting superfluous elements 
+                    from the game as it grows. However, we tend to add stuff 
+                    instead. That’s where analysis helps.
+                </p>
+                <p>As you wrap up a prototype, bounce back to your initial question 
+                    and write down your findings. You’ll have to take a batch of 
+                    decisions to modify the game based off that. Maybe the engine 
+                    or the target platform has technical limitations you didn’t 
+                    expect. Maybe the gameplay is too complex. In any case, every 
+                    prototype is here to answer questions, to give you insights 
+                    on what to do next.
+                </p>
+                <h5 class="sub-sub-header">Core Loops, How to Perfect Them, Surprise the players</h5>
+                <p>Surprise is at the core of humour, strategy, and it’s an essential 
+                    part of entertainment itself. Your core loop might be simple. 
+                    But for the experience to stick with the player and make him 
+                    want to keep going, you’ll have to add elements of surprise.
+                </p>
+                <p>Offer different feedback based on how the player performs at 
+                    any point in time. In a platform game, this would be the size 
+                    of the dust that appears when the players walking versus running. 
+                    Adding a slight screen shake when the character falls from a 
+                    point high in the sky.
+                </p>
+                <p>The random drops of gems, along with combos are part of what 
+                    makes the original Bejeweled so entertaining: the core loop 
+                    revolves around swapping gems, then waiting for the board to 
+                    fill up again. But it’s connected to many other loops: you 
+                    trigger combo streaks, gems merge to produce firebombs… and 
+                    visual effects stack up!
+                </p>
+                <p>I tried a wonderful Metroidvania/Rogue-like recently: Dead Cells. 
+                    In that game, jump downwards while in the air and you’ll produce 
+                    a deadly shockwave. Depending on the character’s fall height, 
+                    you will either produce a small and weak one, a powerful a 
+                    large one, or the character will stagger for a few moments. 
+                    A bed of sparkles spawns on the floor and the enemies get hit 
+                    hard in a large area. It’s extremely satisfying, and combos 
+                    well with the numerous jumps you take! Moving forward, you 
+                    can combine it with ice to see your foes explode in dozens of 
+                    ice shards or splatter around. The possibilities and the visual 
+                    feedback surprise you again and again.
+                </p>
+                <h5 class="sub-sub-header">Core Loops, How to Perfect Them, Juice as you go</h5>
+                <p>Juicing greatly influences the experience. The visual effects, the audio, 
+                    and even the way the users get rewards will keep them engaged. 
+                    You’re looking to drive them in a state of flow, where their 
+                    skills are not only constantly challenged: the game should 
+                    require all their attention. And that’s partly what the juice 
+                    is for: it reinforces the feedback the system gives to the 
+                    players.
+                </p>
+                <p>You should work on it throughout the game’s production and even 
+                    in pre-production, past the first few prototypes. You can add 
+                    a lot of subtle feedback, so feel free to treat juicing as part 
+                    of your gameplay. We are talking about dust when the player 
+                    lands, screen shake when you hit something, short pauses upon 
+                    fast collisions, hold frames when you block an enemy’s attack… 
+                    everything that visually helps the player understand what’s 
+                    happening, and that adds life to the world.
+                </p>
+                <p>There’s a lot of small refinements to add to the game mechanics. 
+                    Part of it is UX design: for example, when you add extra conditions 
+                    in a platformer. You can let the player jump after he started 
+                    falling off a cliff. Or you often register the input for the 
+                    next jump before the character landed. This adds flexibility to 
+                    the controls, in a way that’s almost invisible to the average 
+                    user, but that makes a difference in terms of feel. Those details, 
+                    together, enhance the core loop.
+                </p>
+                <h5 class="sub-sub-header">Core Loops, If F2P, where are the monetization points?</h5>
+                <p>Sooner or later, everyone concepting an F2P-mobile game has 
+                    to start giving some thought on two fundamental issues critical 
+                    in determining a game’s success:
+                    <ol class="list">
+                        <li>How do I generate revenue?</li>
+                        <li>How do I retain my players?</li>
+                    </ol>
+                </p>
+                <h5 class="sub-sub-header">If F2P, where are the monetization points?, Strike a deal with your players</h5>
+                <p>It is possible to make a promise to your players that they will 
+                    receive something awesome in the future if they’re willing 
+                    to make a purchase in advance. Here’s three ways to do that:</p>
+                <p>Investment plans work just like term deposits in real-life banks. 
+                    Players place an initial capital investment to the game’s “bank” 
+                    and are promised an X% interest rate for it. After the due date, 
+                    players can collect their capital investment plus the interest 
+                    and just like in real life, the longer the plan the better the 
+                    interest. Often the minimum value of investment needed to take 
+                    part in these plans is rather high, thus mitigating the risk 
+                    of players abusing the system by just tossing in the premium 
+                    currency from regular gameplay progression.
+                </p>
+                <p>Progression plans bear similarities to investment plans in the 
+                    sense that here too you lay the money down now in the hopes of 
+                    receiving something of greater value in the future. Moreover, 
+                    these plans are often marketed towards players by promising an 
+                    X-times return for their real money, if they are able to completely 
+                    finish the plan. The key difference here, though, is that by default 
+                    rewards from progression plans are not based on time, but on 
+                    player’s progression in the game. For example, in RPGs, players 
+                    with progression plans in their pockets can receive rewards 
+                    every time they hit certain progression milestones, such as, 
+                    lvl 20, lvl 50 or lvl 100. As the amount of premium currency 
+                    you get after passing each threshold gradually increases, 
+                    players should have a decent interest to progress through 
+                    the plan to the very end.
+                </p>
+                <p>Probably most well-known plans are annuities or periodic subscriptions 
+                    that can last from days to years but what you usually see are 
+                    monthly or weekly subscriptions. As many of you know, annuities 
+                    usually hand you extra daily rewards and bonuses during the time 
+                    of their validity. While sometimes players are not required to 
+                    log in every day to receive the allocated rewards (i.e. rewards 
+                    from missed days can stack up and then be collected the next day), 
+                    these systems still encourage players to come back to the game 
+                    and put their new resources to good use as early as possible. 
+                    Also, at least at the end of the subscription period players 
+                    should have a strong interest to make a comeback as rewards 
+                    might not remain in the “can-be-collected”-limbo very long 
+                    after the plan has ended. Naturally, there is no one right 
+                    answer to how strict these systems should be.
+                </p>
+                <h5 class="sub-sub-header">If F2P, where are the monetization points? Sell Expirable Content to Boost Retention</h5>
+                <p>Consumable boosts, which effect lasts for several days (or longer) 
+                    are also great for a sell & re-engage-strategy. A common sight 
+                    especially in Base-builder games, where you often can shield 
+                    yourself from other players’ attacks or boost your construction 
+                    efforts for a limited time period. Players with boosts on surely 
+                    want to avoid wasting any of their limited-time benefits so you 
+                    can expect them to return to the game more often.
+                </p>
+                <p>It is also possible to put a timestamp on items other than consumable boosts. 
+                    For example, many Chinese games sell items that players can use 
+                    and own only temporarily, such as decorative and equipment items 
+                    as well as characters. Besides boosting retention by incentivizing 
+                    players to stick to the game and enjoy the content that is available 
+                    for them only for that limited time, the other upside is the opportunity 
+                    to sell the same content multiple times for the same players. 
+                    This is also a clever way to make expensive content more accessible 
+                    to players with less purchasing power, as you can discount the prices 
+                    for rentable versions of items.
+                </p>
+                <h5 class="sub-sub-header">If F2P, where are the monetization points? Conclusion</h5>
+                <p>There is no denying that some of the aforementioned tools are 
+                    rather aggressive monetization mechanics and, as such, might 
+                    not be suitable for markets that frown on “pay to win”. Another 
+                    thing to keep in mind is that the plans need to be backed up 
+                    by the content. In other words, you need to be able to convince 
+                    your players (by e.g. teasing and foreshadowing future content 
+                    and playing modes) that committing to a plan is a good deal 
+                    and there is enough interesting content to be experienced and 
+                    purchased with the benefits of the plan.
+                </p>
+                <p>In recap, some monetization tools that can be used to boost retention include:
+                    <ul class="list">
+                        <li>Plans, such as, investment and progression plans as well as annuities.</li>
+                        <li>Expirable content, such as, consumable boosts that last 
+                            for a longer time, rentable items and characters.</li>
+                    </ul>
+                </p>
+                <h4 class="sub-header">Objectives and Progression</h4>
+                <p class="ex">How does the player move through the game, literally 
+                    and figuratively, from tutorial to end? What are their
+                    short-term and long-term goals (explicit or implicit)? 
+                    How do these support the game concept, style, and
+                    player-fantasy?</p>
+                <h5 class="sub-sub-header">How to do a good tutorial</h5>
+                <p>Every game teaches you how to play. Plants vs. Zombies is an 
+                    interesting case study because it made “hardcore” strategy content 
+                    accessible to casual and non-gamers. Before Plants vs. Zombies 
+                    the game industry had falsely concluded that the casual market 
+                    just wasn’t interested in certain game genres. In addition to 
+                    appealing to casual gamers, it avoided alienating the veteran 
+                    gamer audience.
+                </p>
+                <h5 class="sub-sub-header">How to do a good tutorial, Blend the tutorial into the game</h5>
+                <p>If you give players the option, they will almost always skip the tutorial. 
+                   There are a lot of bad tutorials out there. The gaming audience would most 
+                   likely describe a tutorial as “that part of the game 
+                   before you get to the fun.
+                </p>
+                <p>This concept is a call to action: stop thinking about the tutorial 
+                    as an isolated part of the experience. The goal is for the 
+                    “learning of the game” to blend so seamlessly into the experience 
+                    that players can’t tell where the tutorial ends and the game begins – 
+                    or if there is any tutorial at all.
+                </p>
+                <p>At Filament Games we strive to integrate learning throughout our games. 
+                    We accomplish this by unifying the fun and the learning into the 
+                    gameplay; as opposed to a model where fun and learning are 
+                    compartmentalized and the game part is just viewed as a reward.
+                </p>
+                <h5 class="sub-sub-header">How to do a good tutorial, Better to have the player do than read</h5>
+                <p>There is a trade off between games and text as mediums to convey information. 
+                    Text is information dense and easy to create; however, doing things is more 
+                    fun and memorable. We will be the first to tell you to avoid games 
+                    if your content is more effective to teach with another medium.
+                    Games tend to be the best solution for deep mastering of a 
+                    few focused concepts.
+                </p>
+                <p>Game developers refer to what actions you can take in the game as 
+                    the game’s mechanics. Filament strives to marry learning objectives 
+                    with the game’s mechanics – this is how we create experiences 
+                    that are both engaging and educational.
+                </p>
+                <h5 class="sub-sub-header">How to do a good tutorial, Spread out the teaching of the game mechanics</h5>
+                <p>The more a user is engaged and invested in an experience, the 
+                    more willing and receptive they will be to spend time learning. 
+                    It is counter-intuitive, but if you start with a tutorial that 
+                    demonstrates the bare minimum to get started, then patiently 
+                    and gradually add more knowledge, the experience will be 
+                    dramatically more effective in its educational goals.
+                </p>
+                <h5 class="sub-sub-header">How to do a good tutorial, Just get the player to do it once</h5>
+                <p>The essence of this rule is to guide someone through an action 
+                    thereby motivating them to perform the action for the first time. 
+                    I don’t have much to add here other than blinking lights and animated 
+                    arrows are by far the most efficient means of communicating action – 
+                    wherever Fan could, he preferred this to text.
+                </p>
+                <h5 class="sub-sub-header">How to do a good tutorial, Use fewer words</h5>
+                <p>Fan’s rule was “there should be a maximum of eight words on 
+                    the screen at any given moment”. Remember, this is advice 
+                    for tutorial text; narrative text is a different story.</p>
+                <p>There are a number of reasons why brevity is king:
+                    <ol class="list">
+                        <li>There is psychology at work here: Miller’s Law: The 
+                            Magical Number Seven, Plus or Minus Two. Having clear 
+                            and concise text that you can read at a glance prevents 
+                            slowing down gameplay.
+                        </li>
+                        <li>Rules are easiest to remember when they are simple.</li>
+                        <li>The longer the text is the less likely people are to read it.</li>
+                        <li>It is a better experience to leave the player breadcrumbs and 
+                            have them feel smart when they connect the dots, as opposed to 
+                            over explaining and risk patronizing players.
+                        </li>
+                        <li>Did you notice that all of Fan’s tutorial rules are eight words or less?</li>
+                    </ol>
+                </p>
+                <h5 class="sub-sub-header">How to do a good tutorial, Use unobtrusive messaging if possible</h5>
+                <p>Fan recommends passive communication – displaying messages in 
+                    a way that they do not interrupt the game. There is a subtle 
+                    difference between a hint banner and a pop-up dialogue. 
+                    Typically a pop-up interrupts whatever the player was doing 
+                    and demands that the player address it. Often the point of this 
+                    kind of communication is to try and focus the player’s attention 
+                    on some other aspect of the game. In addition to avoiding interruption, 
+                    passive communication can stay on the screen until the player 
+                    takes the desired action.
+                </p>
+                <h5 class="sub-sub-header">How to do a good tutorial, Use adaptive messaging</h5>
+                <p>Fan resisted the urge to pre-emptively tutorialize and avoided explicit 
+                    direction as much as possible. Instead he favored hints and gave the 
+                    player a chance to explore and discover. Adapting and reacting to the 
+                    needs of the player is how Plants vs Zombies could support new gamers
+                    and avoided frustrating seasoned gamers. As soon as a player feels 
+                    smarter than the tutorial they will stop listening.
+                </p>
+                <p>Scaffolding several layers of hints is a bit more work as developer, 
+                    but from a user perspective it minimizes how much of a tutorial
+                    they have to experience. Measuring how much scaffolding a 
+                    player needs is also a great metric for assessment.
+                </p>
+                <h5 class="sub-sub-header">How to do a good tutorial, Don’t create noise</h5>
+                <p>Whatever methods you have to communicate with the user, make 
+                    sure that tutorial text is always immediately relevant and 
+                    focused. If you pollute your communication channels with jokes, 
+                    backstory, or character introductions you risk setting yourself 
+                    up to be ignored.
+                </p>
+                <p>Fan talked about how they experimented with the “Crazy Dave” 
+                    dialogue box as the vehicle for his tutorial. There were 
+                    two main problems with this idea – the first was that it 
+                    required extra steps to introduce the character, and the second 
+                    problem was using one system to express information of radically 
+                    different importance. Even though we have a goal to blend the 
+                    tutorial into the game, I’d recommend one system purely 
+                    for tutorial communication.
+                </p>
+                <h5 class="sub-sub-header">How to do a good tutorial, Use visuals to teach</h5>
+                <p>The stronger your visuals are the less teaching you will have to do. 
+                    You should able to look at game objects and quickly establish 
+                    what function they have in the game.
+                    My one educational game commentary for this rule is, depending 
+                    on the topic, having the art of your game “read” well can be 
+                    more important than rigidly pursuing realism.
+                </p>
+                <h5 class="sub-sub-header">How to do a good tutorial, Leverage what people already know</h5>
+                <p>Players bring into the game space all of their previous life 
+                    experiences. For example, it is practically common knowledge 
+                    that zombies are dimwitted and slow moving compared to the 
+                    average human, so you do not have to teach that to players.
+                </p>
+                <p>Every game has its own unique challenges, and the way that 
+                    Plants vs. Zombies solved its specific problems may not apply 
+                    to all games. For example, educational games can rarely afford 
+                    to spend the multiple hours it takes to complete adventure mode 
+                    in Plants vs. Zombies – that is very time-inefficient learning.
+                </p>
+                <p>I’m sure that you have noticed some of George Fan’s rules interact 
+                    with each other. I believe most of his talk was building toward 
+                    the universal and powerful compound idea to communicate passively 
+                    with clear and concise scaffolded hints. The most important 
+                    rule for educational games is that the most effective place to 
+                    teach is in the middle or towards the end of a game, after the 
+                    player is engaged and invested in the experience.
+                </p>
+                <h5 class="sub-sub-header">How to do a good tutorial, Patterns</h5>
+                <ul class="list">Positive Patterns:
+                    <li>Doesn’t feel like a tutorial.</li>
+                    <li>Doesn’t disrupt game flow.</li>
+                    <li>Low chance of failing.</li>
+                    <li>Tutorial Boss.</li>
+                    <li>Preparedness.</li>
+                    <li>Ability to skip a tutorial.</li>
+                    <li>Freedom to experiment.</li>
+                    <li>Focus on unique mechanics</li>
+                </ul>
+                <ul class="list">Negative Patterns:
+                    <li>Hand - Holding.</li>
+                    <li>Not Skippable.</li>
+                    <li>Patronizing.</li>
+                    <li>Forced Videos/Cut scenes.</li>
+                    <li>Overload of information.</li>
+                    <li>Ruins game flow.</li>
+                    <li>Irrelevant Information.</li>
+                    <li>Failed to provide necessary information.</li>
+                    <li>Constant Pauses/Stops.</li>
+                    <li>Too long.</li>
+                </ul>
+                <ul class="list">These are not specifically about positive or negative experiences:
+                    <li>Pop up messages.</li>
+                    <li>Unable to Skip Messages.</li>
+                    <li>Forced into games pace.</li>
+                    <li>Advanced information availability.</li>
+                    <li>Repetitive.</li>
+                    <li>Range of teaching levels.</li>
+                    <li>Short message preference.</li>
+                    <li>Tutorials are necessary.</li>
+                </ul>
                 <h4 class="sub-header">Game Systems</h4>
                 <h4 class="sub-header">Interactivity</h4>
             </section>
