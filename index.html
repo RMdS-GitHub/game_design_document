@@ -49,23 +49,37 @@
         /*Nav bar header.*/
         #navbar header {
             padding: 16px 0px 32px 0px;
-            color: #3680d6;
+            color: #75dc16;
         }
 
         /*Navigation menu links.*/
-        #navbar a {
+        .nav-link {
             padding-bottom: 32px;
             text-decoration: none;
             font-size: 1.5em;
-            color: #4d9a06;
+            color: #3680d6;
             display: block;
         }
+        .nav-link-sub {
+            padding-bottom: 32px;
+            text-decoration: none;
+            font-size: 1em;
+            color:  #44a5bd;
+            display: block;
+        }
+
         /*Change color mouse over.*/
-        #navbar a:hover {
-            color: #75dc16;
+        /*NOTICE THE SYNTAX!!!*/
+        a.nav-link:hover {
+            color: #93c2f8;
             /*Cheap animation.*/
             font-weight: bold;
 
+        }
+        a.nav-link-sub:hover {
+            color:  #7fddf5;
+            /*Cheap animation.*/
+            font-weight: bold;
         }
         /*SIDEBAR END*/
         
@@ -123,18 +137,30 @@
           /*Style for the h3*/
           #main-doc h4 {
             color: #b667b6;
-            padding-left: 128px;
             padding-bottom: 16px;
             font-size: 1em;
         }
-
+        h4 {
+            padding-left: 128px;
+        }
         /*Style for the list.*/
         .list {
             padding-left: 256px;
+            list-style: none;
         }
         .list li {
             padding-bottom: 8px;
         }
+        /*CHange the color of the bullet list*/
+        ul li::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: #b667b6; /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+        }
+        
         /*Padding for long p's inside list.*/
         #list-p {
             padding-left: 0px;
@@ -155,8 +181,22 @@
             <header>Creating a Game Design Concept</header>
             <a class="nav-link" href="#What's_this_about_?">What's this about?</a>
             <a class="nav-link" href="#High_level_Concept">High Level Concept</a>
+                <a class="nav-link-sub" href="#Working_title">Working title</a>
+                <a class="nav-link-sub" href="#Concept_statement">Concept statement</a>
+                <a class="nav-link-sub" href="#Genre(s)">Genre(s)</a>
+                <a class="nav-link-sub" href="#Target_audience">Target audience</a>
+                <a class="nav-link-sub" href="#Unique_Selling_Points">Unique Selling Points</a>
             <a class="nav-link" href="#Product_Design">Product Design</a>
+                <a class="nav-link-sub" href="#Player_Experience">Player Experience and Game POV</a>
+                <a class="nav-link-sub" href="#Visual">Visual and Audio Style</a>
+                <a class="nav-link-sub" href="#Game_World">Game World Fiction</a>
+                <a class="nav-link-sub" href="#Monetization">Monetization</a>
+                <a class="nav-link-sub" href="#Platforms">Platform(s), Technology, and Scope (brief)</a>
             <a class="nav-link" href="#Detailed_and_Game_Systems_Design">Detailed and Game Systems Design</a>
+                <a class="nav-link-sub" href="#Core">Core Loops</a>
+                <a class="nav-link-sub" href="#Objectives">Objectives and Progression</a>
+                <a class="nav-link-sub" href="#Game_systems">Game Systems</a>
+                <a class="nav-link-sub" href="#Interactivity">Interactivity</a>
             <a class="nav-link" href="#From_here_on!">From here on!</a>
         </nav>
         
@@ -165,11 +205,13 @@
             <!--Section 1, What's this?-->
             <section class="main-section" id="What's_this_about_?">
                 <header>What's this about?</header>
-                <p>In this document you can find a lot of information on how
-                    to create a game design concept.<br> A full design document is much longer 
+                <p>In this document you can find a lot of information and articles to help you
+                    in the creation of  a game design concept.</p> 
+                <p>A full design document is much longer 
                     than this. All the content you see in here except for the website
                     itself and some comments, came from different sources that I found
-                    on the web. All the links for the original sources can be found
+                    on the web.
+                <p>All the links for the original sources and more can be found
                     at the end of this document.</p>
             </section>
             
@@ -177,10 +219,10 @@
             <section class="main-section" id="High_level_Concept">
                 <header>High Level Concept</header>
                 <!--Working title.-->
-                <h1 >Working title</h1>
+                <h1 id="Working_title">Working title</h1>
                 <p class="ex">Your game’s title should communicate the gameplay and the 
                     style of the game.</p>
-                <h4>Working your game title</h4>
+                <h2>Analyzing game titles</h2>
                 <p>In the following list are some game titles. Try to figure out 
                     what kind of game it could be, then google it to see if you're right. 
                     This will increase your gaming culture.
@@ -228,10 +270,10 @@
                     <li>Minit</li>
                 </ul>
                 <!--Concept statement.-->
-                <h1 >Concept statement</h1>
+                <h1 id="Concept_statement">Concept statement</h1>
                 <p class="ex">The game in a tweet: one or two sentences at most that say 
                     what the game is and why it’s fun.</p>
-                <h4>Definition of game concept statement</h4>
+                <h2>Definition of game concept statement</h2>
                 <p>A game concept statement or premise is a brief, direct 
                     description of the situation of a game. It describes the 
                     goal of the player, the resistance to this goal and the 
@@ -240,7 +282,7 @@
                     script. Realistically, the gameplay is described as it 
                     influences some elements of storytelling. 
                 </p>
-                <h4>Example</h4>
+                <h2>Example</h2>
                 <p>"In Trick or Treat, players are trapped in the labyrinth of 
                     an old haunted house, escaping by destroying enemy monsters, 
                     dodging traps, and solving the maze." Trick or Treat is a 
@@ -282,64 +324,64 @@
                     gaming platform. In these cases, it makes sense to touch the 
                     distinctive detail.</p>
                 <!--Genre-->
-                <h1 >Genre(s)</h1>
+                <h1 id="Genre(s)">Genre(s)</h1>
                 <p class="ex">Single genre is clearer but often less interesting. Genre 
                     combinations can be risky. Beware of ‘tired’ genres.</p>
-                <h4>All known video game genres</h4>
+                <h2>All known video game genres</h2>
                 <p>The following is a list of all commonly defined video game 
                     genres.</p>
                 <ul class="list">
-                    <li>Action:<br><p id="list-p">Platform games, Shooter games, Fighting games, 
+                    <li>Action:<p id="list-p">Platform games, Shooter games, Fighting games, 
                         Beat 'em up games, Stealth game, Survival games, 
                         Battle Royale games, Rhythm games.</p>
                     </li>
                     
-                    <li>Action-adventure:<br><p id="list-p">Survival horror, Metroidvania.</p></li>
+                    <li>Action-adventure:<p id="list-p">Survival horror, Metroidvania.</p></li>
                     
-                    <li>Adenture:<br><p id="list-p">Text adventures, Graphic adventures, 
+                    <li>Adenture:<p id="list-p">Text adventures, Graphic adventures, 
                         Visual novels, Interactive movie, Real-time 3D adventures.</p>
                     </li>
                     
-                    <li>Role-playing:<br><p id="list-p">Action RPG, MMORPG, Roguelikes, Tactical RPG,  
+                    <li>Role-playing:<p id="list-p">Action RPG, MMORPG, Roguelikes, Tactical RPG,  
                         Sandbox RPG, JRPG, Monster Collection, First-person party-based RPG.</p>  
                     </li>
                     
-                    <li>Simulation:<br><p id="list-p">Construction and management simulation, 
+                    <li>Simulation:<p id="list-p">Construction and management simulation, 
                         Life simulation, Vehicle simulation.</p>
                     </li>
                     
-                    <li>Strategy:<br><p id="list-p">4X game, Artillery game, Auto battler (Auto chess),
+                    <li>Strategy:<p id="list-p">4X game, Artillery game, Auto battler (Auto chess),
                         Multiplayer online battle arena (MOBA),  Real-time strategy (RTS),
                         Real-time tactics (RTT), Tower defense, Turn-based strategy (TBS),
                         Turn-based tactics (TBT), Wargame, Grand strategy wargame.</p>
                     </li>
                     
-                    <li>Sports:<br><p id="list-p">Racing, Sports Game, Competitive, Sports-based 
+                    <li>Sports:<p id="list-p">Racing, Sports Game, Competitive, Sports-based 
                         fighting.</p>
                     </li>
                     
-                    <li>Other noables genres:<br><p id="list-p">Board game or card game, Casual games,
+                    <li>Other notables genres:<p id="list-p">Board game or card game, Casual games,
                         Digital collectible card game, Horror game, Logic game, MMO,
                         Mobile game, Party game, Programming game, Trivia game.</p>
                     </li>
                     
-                    <li>Video game genres by purpose:<br><p id="list-p">Advergame, Art game, Casual game,
+                    <li>Video game genres by purpose:<p id="list-p">Advergame, Art game, Casual game,
                         Christian game, Educational game, Esports, Exergame, Personalized game,
                         Serious game.</p>
                     </li>
                     
-                    <li>Multi-Genre:<br><p id="list-p">Survival-Action-Adventure, Cross-Genre, 
+                    <li>Multi-Genre:<p id="list-p">Survival-Action-Adventure, Cross-Genre, 
                         Narrative-Adventure.</p>
                     </li>
                     
-                    <li>Sandbox / Open world games:<br><p id="list-p">Sandbox, Creative, Open World.</li>
+                    <li>Sandbox / Open world games:<p id="list-p">Sandbox, Creative, Open World.</li>
                     <li>Scientifc studies.</p></li>
                 </ul>
-                <h1 >Target audience</h1>
+                <h1 id="Target_audience">Target audience</h1>
                 <p class="ex">Motivations and relevant interests; potentially age, gender, etc.; 
                     and the desired ESRB rating for the game.</p>
                 
-                <h4>Audience and demographics explanation</h4>
+                <h2>Audience and demographics explanation</h2>
                 <p>Your game’s target audience is the demographics and interests 
                 of the majority of it’s players. For example if you’re launching 
                 a match-3 puzzle game, your target audience is likely female, 35 
@@ -371,7 +413,7 @@
                 It’s called a lookalike audience, as in your-audience-probably-
                 looks-like-their-audience.
                     
-                <h4>Strategy to aim at the right audience</h4>
+                <h2>Strategy to aim at the right audience</h2>
                 <p>Here’s the gist of what you’ll be doing:</p>
                 <ul class="list">
                     <li>The first thing you’ll do is make a list of your game’s 3 biggest competitors.</li>
@@ -393,7 +435,7 @@
                     to people in suits. Sure, those help. But they’re nice-to-haves, 
                     and not really need-to-haves for where you’re at.</p>
 
-                <h4>Stats about demographics in gaming</h4>
+                <h2>Stats about demographics in gaming</h2>
                 <p>Here are some stats about the demographics of video games in the US and the world:</p>
                 <ul class="list">
                     <li>There are more than 2.5 billion gamers around the world.</li>
@@ -434,18 +476,18 @@
                     <li>UK 99% of 8-15 year olds play video games.</li>
                 </ul>
                 
-                <h4>Ratings</h4>
+                <h2>Ratings</h2>
                 <p>As for the ratings there are different self-regulatory organizations 
                    in the world. The most known are, the ESRB (North America),
                    PEGI (Most European countries, India, Israel, Pakistan, South America).
                    A lot of countries and companies like App Store and Google Play
                    have their individual ratings.</p>
                 <!--Unique Selling Points-->
-                <h1 >Unique Selling Points</h1>
+                <h1 id="Unique_Selling_Points">Unique Selling Points</h1>
                 <p class="ex">Critically important. What makes your game stand out? How is 
                     it different from all other games?</p>
                 
-                <h4>USP (Unique Selling Points)</h4>
+                <h2>USP (Unique Selling Points)</h2>
                 <p>There is not an unique definition for USP's, the best statements
                     that I found for the video game industry are these.</p>
                 <ul class="list">
@@ -461,7 +503,7 @@
                     <li>The proposition must be strong enough to move the masses, 
                               i.e., attract new customers.</li>
                 </ul>
-                <h4>Building the USP</h4>
+                <h2>Building the USP</h2>
                 <p>You can now move on to the positioning part.</p>
                 <ul class="list">
                     <li>For (target customer) who (statement of the need or 
@@ -482,17 +524,17 @@
                 <p>Remove the snarkiness and you can easily see how this 
                         complements/works in mysterious ways with the USP definition. 
                 </p>
-                <h4>How to define my own USP</h4>
+                <h2>How to define my own USP</h2>
                 <p>To define your USP these are the things you need to think about.</p>
                 <ul class="list">
-                    <li>Who are you as a studio?:<br><p id="list-p">Start by creating an overview 
+                    <li>Who are you as a studio?:<p id="list-p">Start by creating an overview 
                         of your development studio. Highlight the ideas that you 
                         stand for, your strengths and weaknesses. Assess your development 
                         team to see what extra skills and technologies you need to 
                         invest in to ensure you can meet the development needs 
                         of modern games.</p>
                     </li>
-                    <li>What does your game do to fill a role in the gaming industry?<br>
+                    <li>What does your game do to fill a role in the gaming industry?
                         <p id="list-p">You don’t necessarily have to be a pioneer in the industry 
                         for your game to be successful. There are a lot of games 
                         that are built on the success of other titles and the secret 
@@ -501,14 +543,14 @@
                         target audience needs to be addressed and craft a USP 
                         that signifies your promise to address those issues.</p>
                     </li>
-                    <li>What part of your game addresses that niche?<br><p id="list-p">Make it 
+                    <li>What part of your game addresses that niche?<p id="list-p">Make it 
                         clear what part of your game addresses the pain points 
                         gamers experience when playing titles in your niche. 
                         This will make your game relatable and entice more players 
                         to try it out.</p>
                     </li>
                     
-                    <li>Why is your game different from the competition?<br><p id="list-p">Your 
+                    <li>Why is your game different from the competition?<p id="list-p">Your 
                         USP should highlight what makes your game different from 
                         the competition. Gamers value authenticity and your USP 
                         should clearly point out the factors that make your game 
@@ -517,7 +559,7 @@
                         unique issues that make it different from the competition 
                         will help generate more interest.</p>
                     </li>
-                    <li>Why are these reasons better than what the competition does?<br>
+                    <li>Why are these reasons better than what the competition does?
                         <p id="list-p">Stating what makes you different from the competition is 
                         not enough. You need to show how your game’s uniqueness 
                         is good for your audience. By matching your USP with the 
@@ -525,7 +567,7 @@
                         game brings to the prospects becomes evident, and this 
                         will help you persuade them to choose you over the competition.</p>
                     </li>
-                    <li>Who is it aimed at?<br><p id="list-p">To effectively convey the competitive 
+                    <li>Who is it aimed at?<p id="list-p">To effectively convey the competitive 
                         advantage of your game you, first of all, have to know 
                         your audience. Understanding the goals and desires of 
                         your target users will make it easy to come up with a USP 
@@ -534,7 +576,7 @@
                         check out your competitors to see what kind of people 
                         they are targeting with their marketing messages.</p>
                     </li>
-                    <li>Why should they care?<br><p id="list-p">For people to care about your 
+                    <li>Why should they care?<p id="list-p">For people to care about your 
                         game, it needs to show authentic value and give your 
                         players something they want. The gaming industry is 
                         highly saturated and for gamers to even glance your way, 
@@ -550,13 +592,13 @@
             <section class="main-section" id="Product_Design">
                 <header>Product Design</header>
                 <!--Player Experience and Game POV-->
-                <h1 >Player Experience and Game POV</h1>
+                <h1 id="Player_Experience">Player Experience and Game POV</h1>
                 <p class="ex">Who is the player? What is the setting? What is the fantasy 
                     the game grants the player? What emotions do
                     you want the player to feel? What keeps the player engaged 
                     for the duration of their play?</p>
                 <h2 >Player Experience</h2>
-                <h4>Description model</h4>
+                <h3>Description model</h3>
                 <p>To describe the player experience I found an article from an
                     UX designer that create a model specific for gaming.
                     In his model there are 5 planes, motivation,meaningful choices,
@@ -572,7 +614,7 @@
                     run into trouble if they skip over planes or start 
                     from the wrong end.</p>
                 <ul class="list">
-                    <li>Motivation:<br><p id="list-p">The first thing to think about is who 
+                    <li>Motivation:<p id="list-p">The first thing to think about is who 
                         the players are and why they would want to play the game. 
                         This plane comprises two main elements. In the short term, 
                         there's the up-front “interestingness” of the experience—the 
@@ -599,7 +641,7 @@
                         them. For very long engagements, diversifying and layering 
                         rewards can persuade players to stay involved.</p>
                     </li>
-                    <li>Meaningful choices:<br>
+                    <li>Meaningful choices:
                         <p id="list-p">
                         The next plane defines how the game's 
                         structure and rules allow players to exercise choices 
@@ -779,7 +821,7 @@
                     character, which is most of the time. And this is another reason 
                     why storytelling in games is so hard.
                 </p>
-                <h1 >Visual and Audio Style</h1>
+                <h1 id="Visual">Visual and Audio Style</h1>
                 <p class="ex">What is the “look and feel” of the game? How does this support 
                     the desired player’s experience? What
                     concept art or reference art can you show to give the feel 
@@ -792,6 +834,7 @@
                     primarily due to hardware advances and restrictions such as 
                     the processing power of central or graphics processing units. 
                 </p>
+                <h3>Other Techniques than 2D or 3D</h3>
                 <h4>Text Games</h4>
                 <p>Some of the earliest video games were text games or text-based 
                     games that used text characters instead of bitmapped or vector 
@@ -947,14 +990,14 @@
                     other displays such as smartphone or tablet displays. 
                 </p>
                 <h2 >Audio Style</h2>
-                <h4>The beginning</h4>
+                <h3>The beginning</h3>
                 <p>Video game music is the soundtrack that accompanies video games. 
                     Early video game music was once limited to simple melodies of 
                     early sound synthesizer technology. These limitations inspired 
                     the style of music known as chiptunes, which combines simple melodic 
                     styles with more complex patterns or traditional music styles, 
                     and became the most popular sound of the first video games.</p>
-                <h4>The Evolution</h4>
+                <h3>The Evolution</h3>
                 <p>With advances in technology, video game music has grown to include 
                     the same breadth and complexity associated with television and 
                     film scores, allowing for much more creative freedom. 
@@ -965,7 +1008,7 @@
                     change depending on a player's actions or situation, such as 
                     indicating missed actions in rhythm games, informing the player 
                     they are in a dangerous situation or rewarding them for certain achievements.</p>
-                <h4>The Options</h4>
+                <h3>The Options</h3>
                 <p>Video game music can be one of two options: original or licensed. 
                     In order to create or collect this music, teams of composers, 
                     music directors, and music supervisors must work with the game 
@@ -973,11 +1016,11 @@
                     The popularity of video game music has expanded education and 
                     job opportunities, generated awards, and allowed video game soundtracks 
                     to be commercially sold and performed in concerts.</p>
-                <h1 >Game World Fiction</h1>
+                <h1 id="Game_World">Game World Fiction</h1>
                 <p class="ex">Briefly describe the game world and any narrative in player-relevant 
                     terms (as presented to the player).
                 </p>
-                <h4>Intro and examples of well known worlds</h4>
+                <h2>Intro and examples of well known worlds</h2>
                 <p>Few creative mediums let you explore stories like video games. 
                     Players don’t just watch a story—they participate in it, sometimes 
                     steering narratives to wildly divergent endings. But in order for 
@@ -1004,11 +1047,11 @@
                         <li>The Continent from The Witcher 3</li>
                         <li>Planescape: Torment’s Sigil</li>
                     </ul>
-                <h1 >Monetization</h1>
+                <h1 id="Monetization">Monetization</h1>
                 <p class="ex">How will the game make money? Premium purchase? F2P? 
                     How do you justify this within the design?
                 </p>
-                <h3>What is Monetization?</h3>
+                <h2>What is Monetization?</h2>
                 <p>Video game monetization is the type of process that a video game 
                     publisher can use to generate revenue from a video game product. 
                     The methods of monetization may vary between games, especially 
@@ -1018,11 +1061,11 @@
                     methods continue to diversify, they also affect the game design 
                     in a way that sometimes leads to criticism. 
                 </p>
-                <h3>The models</h3>
+                <h2>The models</h2>
                 <p>Although there are several business models to monetize video games, 
                     they can be categorized into six major models. 
                     A video game may use more than one of these models at once.</p>
-                <h4>Retail purchase</h4>
+                <h3>Retail purchase</h3>
                 <p>Retail purchase is the traditional method by which games are sold 
                     from brick and mortar stores or online retailers. 
                     Customers pay for a physical copy of the game and any other 
@@ -1036,7 +1079,7 @@
                     Furthermore, some retail purchases may come with collectible boxes
                     and possible in-game items to attract customers over digital download.
                 </p>
-                <h4>Digital Distribution</h4>
+                <h3>Digital Distribution</h3>
                 <p>Digital distribution or digital download is similar in practice to 
                     retail purchasing, but is different in venue. Instead of acquiring 
                     a game through a physical store, customers buy their games online and 
@@ -1046,7 +1089,7 @@
                     of games from many different developers in one location. 
                     Valve's Steam is an example of digital distribution platforms for PC gaming. 
                 </p>
-                <h4>Subscription Model</h4>
+                <h3>Subscription Model</h3>
                 <p>Subscription model is a business model where a game requires continuous, 
                     ongoing payments from customers in order to play the game. Games that utilize 
                     subscription often sell access in blocks of one-month increments or in multiples 
@@ -1057,14 +1100,14 @@
                     connection or services that require capital to operate on the part 
                     of the publisher or developer. An example of games that use subscription 
                     model is World of Warcraft.</p>
-                <h4>Subscription Service</h4>
+                <h3>Subscription Service</h3>
                 <p>Subscription service is, on the other hand, not a direct subscription 
                     to a game but a subscription to gaming-related services. 
                     These services may include, but not limited to, monthly games 
                     such as Humble Bundle, temporary access to game library such as 
                     Origin Access, and access to multiplayer online session such as PlayStation Plus.
                 </p>
-                <h4>Microtransaction</h4>
+                <h3>Microtransaction</h3>
                 <p>Microtransaction is a business model where aspects of a game's 
                     contents can be purchased to enhance the game experience for the player. 
                     These aspects may range among new playable contents, in-game currencies, 
@@ -1074,7 +1117,7 @@
                     mobile games where potential customers may be hesitant to purchase a 
                     full game, but more at ease with smaller, yet more numerous payments.</p> 
                 </p>
-                <h4>Downloadable Content (DLC)</h4>
+                <h3>Downloadable Content (DLC)</h3>
                 <p>Downloadable content (DLC) is a kind of microtransaction that 
                     expands the base game by providing additional contents. 
                     Depending on the game and publisher, a downloadable content 
@@ -1082,7 +1125,7 @@
                     series of smaller expansions. 
                     These expansions can be either skins, maps, story, or even a 
                     new game mode based on the main game.</p>
-                <h4>Loot Box</h4>    
+                <h3>Loot Box</h3>    
                 <p>Loot box is a variation of microtransaction of which the rewards are random. 
                     The player has no control over the rewards they receive for 
                     paying in-game or real world currencies although the game often 
@@ -1096,7 +1139,7 @@
                     to obtain characters and items more heavily than other games. 
                     They are sometimes referred to as a Gacha game.
                 </p>
-                <h4>Player Trading</h4>
+                <h3>Player Trading</h3>
                 <p>Player trading is a business model where in-game items and digital 
                     currencies can be traded between players on the game marketplace 
                     that allows the publisher to get a cut on transactions that players made. 
@@ -1104,7 +1147,7 @@
                     like Steam community market, or from a difference between buying 
                     and selling price of the in-game currency, like World of Warcraft.
                 </p>
-                <h4>Advertising</h4>
+                <h3>Advertising</h3>
                 <p>Advertising is a form of indirect monetization. Apart from 
                     aforementioned methods of monetization, indirect monetization 
                     generate revenue from other sources that does not directly come 
@@ -1115,7 +1158,7 @@
                     usually are free-to-play or are cheaper than other games as 
                     their production cost has already been subsidized.</p>
 
-                <h3>Conclusion</h3>
+                <h2>Conclusion</h2>
                 <p>Video game monetization has been criticized by journalists who 
                     see it as video game publishers being excessively greedy, in 
                     particular with the implementation of microtransactions.</p> 
@@ -1127,8 +1170,8 @@
                     with many countries revising their laws in response.
                 </p>
 
-                <h1 >Platform(s), Technology, and Scope</h1>
-            </section>
+            <h1 id="Platforms">Platform(s), Technology, and Scope</h1>
+       
             <p class="ex">PC or mobile? Table or phone? 2D or 3D? Unity or Javascript? How long to make, and how big a team?
                 How long to first-playable? How long to complete the game? Major risks?
             </p>
@@ -1142,12 +1185,14 @@
                 experiences now available, here’s a guide to some of the 
                 different types of video game platforms.
             </p>
+            <h3>Pc's</h3>
             <p>PC gaming is one of the best and oldest ways to experience video games. 
                 Playing on a PC has many advantages, including higher-quality visuals 
                 and more versatility. More often than not, game visuals are more superior 
                 on a PC than on a gaming console—PC gaming allows for more customization 
                 via various accessories and options that can enhance your experience. 
             </p>
+            <h3>Video Game Consoles</h3>
             <p>Video game consoles from Microsoft, Sony, and Nintendo have been leading 
                 the way in gaming platforms for years now. In fact, a 2018 study from 
                 the Pew Research Center states that “84% of teens say they have… access 
@@ -1157,6 +1202,7 @@
                 and Nintendo have also brought back classic consoles in miniature form, 
                 such as the NES Classic.  
             </p>
+            <h3>Smartphones</h3>
             <p>A recent trend in gaming is the increased development of games for 
                 mobile phones and tablets. Most people today carry a smartphone 
                 with gaming capabilities; the games available on mobile devices 
@@ -1167,6 +1213,7 @@
                 augmented reality with interactive games such as Pokémon Go and the 
                 newly-released Harry Potter: Wizards Unite.
             </p>
+            <h3>Virtual Reality</h3>
             <p>Aside from mobile gaming, the gaming industry also continues to 
                 push virtual reality forward, making huge strides in the platform. 
                 VR puts you in the middle of a virtual world, and it’s one of the 
@@ -1179,6 +1226,7 @@
                 have the most potential beyond gaming, and we’ll continue to see it 
                 move forward for years to come.
             </p>
+            <h3>Arcade</h3>
             <p>Arcade games may seem like a dying gaming platform, but this is 
                 far from the case. The thirst for nostalgia has never been greater, 
                 and nothing quenches that thirst like arcade gaming. With games 
@@ -1191,6 +1239,7 @@
                 You can also buy an arcade station for yourself and build a collection 
                 of your own.
             </p>
+            <h3>Smart Tv's</h3>
             <p>An often-overlooked way to play video games is on a television. 
                 If you own a smart TV, you can actually download games and play 
                 without a console. While every smart TV is different, most of 
@@ -1200,6 +1249,7 @@
                 some pretty cool games on a large TV display, which is more 
                 affordable than getting a console.
             </p>
+            <h3>Web Browsers</h3>
             <p>Another easy way to game is to simply use a web browser. Thousands of 
                 free games are available on the Internet, from games based on TV shows 
                 to classics such as RuneScape and FarmVille. There are also plenty of 
@@ -1207,6 +1257,7 @@
                 Lemonade Stand. The Internet might be the most accessible way for 
                 people of all ages to play games today.
             </p>
+            <h3>Streaming Services</h3>
             <p>
                 The final gaming platform in our list is one that is still a new, 
                 exciting concept. TV has been transitioning into streaming, and 
@@ -1246,10 +1297,12 @@
 
             <h2 >Scope</h2>
             <h3>Team Size</h3>
+            <h4>Intro</h4>
             <p>The number of developers on a team is directly proportional to how close 
                 they are to shipping. The further away you are, the fewer people you need. 
                 I’ll try to give you a quick rundown of the various stages of development, 
                 and the number of people a AAA game would need at that point.</p>
+            <h4>Project Concept</h4>
             <p>It generally starts with just the high level concept, the one-sentence 
                 description of what the game is, like “it’s GTA with unicorns”, 
                 “four versus one asymmetric pvp in space”, or “open world questing plus dating 
@@ -1257,6 +1310,7 @@
                 game will actually play like - “KOTOR 3”, “WiiU Metroid”, or “King’s Quest” 
                 might be examples of this. This sort of thing usually only has a handful of 
                 people at most - one lead and maybe one or two others.</p>
+            <h4>Concept work begining</h4>
             <p>Once the high level idea has been approved by the publishing bigwigs, 
                 the concept work begins. This is typically when the discipline directors 
                 start planning - the technical director figures out what sort of 
@@ -1265,6 +1319,7 @@
                 thinks about what the major gameplay features will be and how they 
                 will interact with each other, and so on. The team here will generally 
                 be around five people, maybe up to ten at most.</p>
+            <h4>Small Prototypes</h4>
             <p>After the leadership on the team and the core features are established, they can begin 
                 bringing on some senior developers to help suss out the features 
                 they’ve established in the previous stage. Engineers look at the 
@@ -1274,6 +1329,7 @@
                 set of art for more a visual sense of what things will be. 
                 Designers will likely start building small prototypes and 
                 writing vision documents for what it is they are aiming for.</p>
+            <h4>First Playable</h4>
             <p>Once this process begins, the inevitable goal is to reach the First Playable, 
                 or Vertical Slice. Artists art, engineers engineer, designers design, 
                 and they work towards building out a single contained game experience 
@@ -1283,6 +1339,7 @@
                 the end. The leadership is starting to bring on more experienced 
                 (but not necessarily senior) developers to create the content that 
                 goes into the vertical slice.</p>
+            <h4>Production Start</h4>
             <p>After the vertical slice has been approved, production begins and the team starts aggressively 
                 bringing people on to create all of the systems and features and 
                 assets that need to be built for the rest of the game. This is 
@@ -1295,6 +1352,7 @@
                 typically need a lot of people for only part of the production 
                 process to other studios. Most of these are art tasks, like building 
                 props, textures, or cleaning up motion captured animations.</p>
+            <h4>The last months</h4>
             <p>For the last six months to a year or so of the project, you’ll 
                 have your full complement of developers typically numbering between 
                 100 and 200, with possibly additional QA, liaisons with other 
@@ -1307,54 +1365,51 @@
             <p>Here are the following stages of game development, and the best ways of 
                 learning game development (step by step).</p>
                 <ul class="list">
-                    <li><p id="list-p">Step 1: High Concept</p>
+                    <li>Step 1: High Concept<p id="list-p"> 
                         The first major step in how to develop a game is the high concept. 
                         This is a general idea. It’s a very brief description where 
-                        you try to distill your ideas down to a few sentences.
+                        you try to distill your ideas down to a few sentences.</p>
                     </li>
                 
-                    <li><p id="list-p">Step 2: Pitch</p>
-                        This is the big one. You pitch your idea in a summarized 
+                    <li>Step 2: Pitch
+                        <p id="list-p">This is the big one. You pitch your idea in a summarized 
                         form to best communicate ideas and their goals. It’s also 
                         a time to promote why it would be a prudent idea to develop 
-                        financially and commercially.
+                        financially and commercially.</p>
                     </li>
                 
-                    <li><p id="list-p">Step 3: Concept</p>
-                            Further along, this is the lovechild between the high 
+                    <li>Step 3: Concept
+                        <p id="list-p">Further along, this is the lovechild between the high 
                             concept and pitch. This is where you outline and describe 
                             all of the aspects of the game. We’re talking story, 
                             demographics, risk analysis and a boatload of 
-                            further information.
+                            further information.</p>
                     </li>
                         
-                    <li><p id="list-p">Step 4: Game Design Document</p>
-                            This document includes aspects tied to actual 
+                    <li>Step 4: Game Design Document
+                        <p id="list-p">This document includes aspects tied to actual 
                             gameplay and may include prototypical aspects of 
-                            your project.
+                            your project.</p>
                     </li>
                 
-                    <li><p id="list-p">Step 5: Prototype</p>
-                            This is where you and your team can shine early on. 
+                    <li>Step 5: Prototype
+                        <p id="list-p">SThis is where you and your team can shine early on. 
                             Building the prototype will allow you to develop the 
                             methods in which you’ll fully execute your idea. It’s 
                             a good way to build a proof of concept, adapting your 
-                            goals into a more tangible form.
+                            goals into a more tangible form.</p>
                     </li>
-                
-                    <li><p id="list-p">Step 6: Production</p>
+                    <li>Step 6: Production</li>
                             
                         <ul class="li">
                             <li>Design</li>
                             <li>Creation</li>
                             <li>Programming</li>
-                        </ul>
-                            
+                        </ul>       
                         <p id="list-p">This is when the ball starts to roll. Things like sound and early 
                         graphical assets begin to be implemented. The game is 
                         lifted off of the ground and finally starts to take shape. 
                         This is where programming comes into the game development process.</p>
-                    </li>
                 </ul>
 
             <h3>Agile Game Development</h3>
@@ -1570,29 +1625,33 @@
                 transitioned to work on extra content, patch fixes, or other 
                 projects in development at this point, while the smaller core 
                 team works on the critical cert-threatening issues.</p>
+            </section>
                 
             <!--Section 4, Detailed and game systems design.-->
             <section class="main-section" id="Detailed_and_Game_Systems_Design">
                 <header>Detailed and Game Systems Design</header>
-                <h1 >Core Loops</h1>
+                <h1 id="Core">Core Loops</h1>
                 <p class="ex">How do game objects and the player’s actions form loops? 
                     Why is this engaging? How does this support
                     player goals? What emergent results do you expect/hope to see? 
                     If F2P, where are the monetization points?
                 </p>
-                <h2 >Core Loops, Explanation</h2>
+                <h2>What is a loop?</h2>
+                <h3>Explanation</h3>
                 <p>A loop is how a game determines the results of an action and 
                    feeds that result back to a player. Players are usually the 
                    initiators of loops but, in videogames especially, characters 
                    may also initiate their own loops. An enemy taking a shot at 
                    you is trying to win, just as you are.
                 </p>
+                <h3>Loop Structure</h3>
                 <p>Loops all have a the same structure: The player performs an action, 
                     the results of that action are determined according to rules, 
                     states of different resources in the environment are updated 
                     according to the outcome. The loop closes with one of two results, 
                     win or loss, and the player may have the option to take further actions.
                 </p>
+                <h3>When It Ends</h3>
                 <p>Some loops are closed immediately, where others are hours or even 
                     days long. Loops are also differently arranged. In some games 
                     like Bejeweled they are strictly sequential. In others they 
@@ -1604,6 +1663,7 @@
                     let the player initiate loops at their own pace, while others 
                     operate at either the game’s pace or that of other players.
                 </p>
+                <h3>Classes Of Loops</h3>
                 <p>Loops are subject to both synchrony and temporany, leading to 
                    four classes of loop: single (asynchronous, atemporal), multiple 
                    (synchronous, contemporal), serial (synchronous, atemporal) and 
@@ -1612,6 +1672,7 @@
                    in the long term. In poor games, this clustering either does 
                    not happen or happens badly. 
                 </p>
+                <h3>The Psychology Of The Open Loop</h3>
                 <p>The psychology of the open loop is very important to understanding 
                     why games are engaging. The play brain remembers and is agitated 
                     by actions left unfinished, and the reside more presently in 
@@ -1619,7 +1680,8 @@
                     the status of all of their tables is apt in this regard. Each is 
                     an open loop, a question to be answered and learned from. </p>
                 
-                <h2 >Core Loops, How to Perfect Them, Intro</h2>
+                <h2 >How to Perfect Loops</h2>
+                <h3>Intro</h3>
                 <p>At the heart of your game’s design, there are core mechanics, 
                     and the core gameplay loop. In short, it’s the main activities 
                     that structure the entire design and the players engage into 
@@ -1627,12 +1689,14 @@
                     of the game, something you cannot remove without fundamentally 
                     altering the experience.
                 </p>
+                <h3>The Mario Example</h3>
                 <p>In the original Mario, this would be walking, running and jumping. 
                    The various enemies, bosses, and environments stem from the core mechanics. 
                    They are here to surprise the player, challenge his skills and 
                    keep the experience fresh. In other words: to exploit the core 
                    loop to its fullest, and add extra depth to the experience.
                 </p>
+                <h3>The Several Loops</h3>
                 <p>There are several loops that structure your projects, depending 
                     on the lenses you use. Just like there’s a core gameplay loop, 
                     there are core economic loops that will derive from your business 
@@ -1643,8 +1707,10 @@
                     etc. They echo the player’s short, mid and long-term goals. E.g. 
                     Collecting coins, beating the level, reaching and beating the end boss.
                 </p>
+                <h3>The Core Gameplay Loop</h3>
                 <p>We’ll focus on the core gameplay loop here: the one that serves as a 
                     foundation to your game’s design.</p>
+                <h4>The Core Loop Explanation</h4>
                 <p>The core gameplay loop is comprised of some of the basic actions 
                     players can take at any point in time, the main mechanics. 
                     We expect the player to use them at a certain frequency and 
@@ -1653,6 +1719,7 @@
                     the core gameplay loop might resemble something like walk, attack, 
                     collect. That’s what you keep doing from moment to moment.
                 </p>
+                <h4>The Higher Level Game Loop</h4>
                 <p>At the same time, the users have higher-level goals that build 
                     upon the lower-level ones. A higher-level game loop might be:
                 <ol class="list">
@@ -1661,6 +1728,7 @@
                     <li>Get rewards.</li>
                 </ol>
                 </p>
+                <h4>The Lowest Level</h4>
                 <p>The core loop is the lowest-level one. In the rogue-like example, 
                     it builds upon the basic actions players can use to take 
                     meaningful decisions: the game’s central mechanics. Should 
@@ -1674,13 +1742,15 @@
                     different in the end. We’re talking about an essential part 
                     of the game, yet that’s only a tiny part of it.
                 </p>
-                <h2 >Core Loops, How to Perfect Them, The core loop for all it’s worth</h2>
+                <h3 >The core loop for all it’s worth</h3>
+                <h4>The Controls</h4>
                 <p>The more the player has to go through the loop, the more its 
                     quality will affect your game’s retention. On mobiles or on 
                     the web, if the main mechanics aren’t intuitive, the controls 
                     not polished, you’ll lose them within a minute or two. People 
                     will give you a single chance to entertain them.
                 </p>
+                <h4>The Experience Delivery</h4>
                 <p>What experience do you want to deliver? What’s unique, essential 
                     to it? The core gameplay loop is the heart of your game. It is 
                     at the heart of the experience you offer. It’s not just what 
@@ -1689,6 +1759,7 @@
                     All aspects of a game’s design are interconnected, and so are 
                     the various loops that compose it.
                 </p>
+                <h4>Loops Inheritance</h4>
                 <p>Loops build upon one another with a parent-child relationship, 
                     stem from one another, intersect or play in parallel. In the 
                     recent Rayman series, the lums aren’t only collectibles: they 
@@ -1697,6 +1768,7 @@
                     can view them as a single mechanic that is part of different 
                     game loops.
                 </p>
+                <h4>The wisdom and harmony</h4>
                 <p>The way the enemies behave, the level design, the graphics and 
                     even the sounds will all work together to reinforce the game’s 
                     core. 
@@ -1708,7 +1780,8 @@
                     Thus, the better you understand them, the more precisely you 
                     can tweak them and make them as intuitive as possible.
                 </p>
-                <h2 >Core Loops, How to Perfect Them, So what's a good core loop?</h2>
+                <h3>What's a good core loop?</h3>
+                <h4>The Target Audience</h4>
                 <p>A good core loop should be able to put the player in state of flow. 
                     You want him to be fully engaged in the game: nothing should 
                     distract the user’s attention from the task at hand. And at 
@@ -1721,7 +1794,7 @@
                     so you’ll have to pick a target audience to design for. 
                     Then, it will require many iterations.
                 </p>
-                <h2 >So what's a good core loop?, A clear goal</h2>
+                <h4>A clear goal</h4>
                 <p>You should give the player one main objective. One that is not 
                     always explicit, but that we at least intuitively understand 
                     from the mechanics and the game world. Take the widely popular 
@@ -1737,7 +1810,7 @@
                     dangerous. Even without the app’s title, we naturally understand what 
                     we are supposed to do: avoid the spikes for as long as possible.
                 </p>
-                <h2 >So what's a good core loop?, Keep It Short and Sweet</h2>
+                <h4>Keep It Short and Sweet</h4>
                 <p>The core loop should ideally be intuitive, yet offer a lot of 
                     opportunities to expand the gameplay with new obstacles and 
                     level design patterns.
@@ -1762,7 +1835,7 @@
                     if they don’t resonate with your work, they give us great 
                     examples of subtractive or minimalistic design.
                 </p>
-                <h2 >So what's a good core loop?, Build upon a strong theme</h2>
+                <h4>Build upon a strong theme</h4>
                 <p>Games tend to be perceived as pure forms of entertainment. 
                     Yet, any design revolves around and supports a theme. It does 
                     not necessarily relate to a story or a message you’d want to share. 
@@ -1787,7 +1860,7 @@
                     force its theme onto you. Instead, as the player, you can relax and 
                     fully enjoy the experience.
                 </p>
-                <h2 >Core Loops, How to Perfect Them, Design, prototype, evaluate</h2>
+                <h3>Design, prototype, evaluate</h3>
                 <p>You’ll establish your core loop during pre-production. And I mean Marc 
                     Cerny’s pre-production, as he introduced with The Method. It encompasses 
                     all the iterations on your game until you have a few finished levels, 
@@ -1797,17 +1870,17 @@
                 <p>A good core loop isn’t born from an idea you implement once and build upon. 
                     As with any design, it sprouts and evolves through 
                     successive iterations. In short:
-                    <ol class="list">
+                    <ul class="list">
                         <li>Pick an idea that has potential.</li>
                         <li>Build a prototype to test it out.</li>
                         <li>Evaluate the depth you can get off your implementation, 
                             the improvements and changes it requires.</li>
-                    </ol>
+                    </Ul>
                 </p>
                 <p>Start over, and build upon what you have if it corresponds to 
                     the experience you wish to deliver.
                 </p>
-                <h2 >Design, Prototype, Evaluate, Getting started with iterations</h2>
+                <h4>Getting started with iterations</h4>
                 <p>
                     In practice, I start a project with a short document, around 
                     1 to 3 pages long, with a few pictures. It includes a rough 
@@ -1843,7 +1916,7 @@
                 <p>Create successive prototypes, each focusing on one specific 
                     aspect of the game, and more importantly, evaluate the results.
                 </p>
-                <h2 >Design, Prototype, Evaluate, Analyze each iteration</h2>
+                <h4>Analyze each iteration</h4>
                 <p>You not only need your mechanics to be rock-solid: you want to 
                     exploit them as deeply as you can. Thus, to perfect your core loop, 
                     you also must polish other aspects of the game. That’s why as 
@@ -1867,7 +1940,7 @@
                     prototype is here to answer questions, to give you insights 
                     on what to do next.
                 </p>
-                <h2 >Core Loops, How to Perfect Them, Surprise the players</h2>
+                <h4>Core Loops, How to Perfect Them, Surprise the players</h4>
                 <p>Surprise is at the core of humour, strategy, and it’s an essential 
                     part of entertainment itself. Your core loop might be simple. 
                     But for the experience to stick with the player and make him 
@@ -1898,7 +1971,7 @@
                     ice shards or splatter around. The possibilities and the visual 
                     feedback surprise you again and again.
                 </p>
-                <h2 >Core Loops, How to Perfect Them, Juice as you go</h2>
+                <h4>Core Loops, How to Perfect Them, Juice as you go</h4>
                 <p>Juicing greatly influences the experience. The visual effects, the audio, 
                     and even the way the users get rewards will keep them engaged. 
                     You’re looking to drive them in a state of flow, where their 
@@ -1925,19 +1998,20 @@
                     user, but that makes a difference in terms of feel. Those details, 
                     together, enhance the core loop.
                 </p>
-                <h2 >Core Loops, If F2P, where are the monetization points?</h2>
+                <h3>In F2P (Free To Play), where are the monetization points?</h3>
                 <p>Sooner or later, everyone concepting an F2P-mobile game has 
                     to start giving some thought on two fundamental issues critical 
                     in determining a game’s success:
-                    <ol class="list">
+                    <ul class="list">
                         <li>How do I generate revenue?</li>
                         <li>How do I retain my players?</li>
-                    </ol>
+                    </ul>
                 </p>
-                <h2 >If F2P, where are the monetization points?, Strike a deal with your players</h2>
-                <p>It is possible to make a promise to your players that they will 
+                <p>Strike a deal with your players, it is possible to make a 
+                    promise to your players that they will 
                     receive something awesome in the future if they’re willing 
                     to make a purchase in advance. Here’s three ways to do that:</p>
+                <h4>Investment Plans</h4>
                 <p>Investment plans work just like term deposits in real-life banks. 
                     Players place an initial capital investment to the game’s “bank” 
                     and are promised an X% interest rate for it. After the due date, 
@@ -1948,6 +2022,7 @@
                     of players abusing the system by just tossing in the premium 
                     currency from regular gameplay progression.
                 </p>
+                <h4>Progression Plans</h4>
                 <p>Progression plans bear similarities to investment plans in the 
                     sense that here too you lay the money down now in the hopes of 
                     receiving something of greater value in the future. Moreover, 
@@ -1963,6 +2038,7 @@
                     players should have a decent interest to progress through 
                     the plan to the very end.
                 </p>
+                <h4>Annuities, Periodic Subscriptions</h4>
                 <p>Probably most well-known plans are annuities or periodic subscriptions 
                     that can last from days to years but what you usually see are 
                     monthly or weekly subscriptions. As many of you know, annuities 
@@ -1978,7 +2054,8 @@
                     after the plan has ended. Naturally, there is no one right 
                     answer to how strict these systems should be.
                 </p>
-                <h2 >If F2P, where are the monetization points? Sell Expirable Content to Boost Retention</h2>
+                <h3>Sell Expirable Content to Boost Retention</h3>
+                <h4>Consumable Boosts</h4>
                 <p>Consumable boosts, which effect lasts for several days (or longer) 
                     are also great for a sell & re-engage-strategy. A common sight 
                     especially in Base-builder games, where you often can shield 
@@ -1987,6 +2064,7 @@
                     want to avoid wasting any of their limited-time benefits so you 
                     can expect them to return to the game more often.
                 </p>
+                <h4>Timestamps</h4>
                 <p>It is also possible to put a timestamp on items other than consumable boosts. 
                     For example, many Chinese games sell items that players can use 
                     and own only temporarily, such as decorative and equipment items 
@@ -1998,12 +2076,13 @@
                     to players with less purchasing power, as you can discount the prices 
                     for rentable versions of items.
                 </p>
-                <h2 >If F2P, where are the monetization points? Conclusion</h2>
+                <h3>Conclusion</h3>
                 <p>There is no denying that some of the aforementioned tools are 
                     rather aggressive monetization mechanics and, as such, might 
                     not be suitable for markets that frown on “pay to win”. Another 
                     thing to keep in mind is that the plans need to be backed up 
-                    by the content. In other words, you need to be able to convince 
+                    by the content.</p>
+                    <p>In other words, you need to be able to convince 
                     your players (by e.g. teasing and foreshadowing future content 
                     and playing modes) that committing to a plan is a good deal 
                     and there is enough interesting content to be experienced and 
@@ -2016,13 +2095,14 @@
                             for a longer time, rentable items and characters.</li>
                     </ul>
                 </p>
-                <h1 >Objectives and Progression</h1>
+                <h1 id="Objectives">Objectives and Progression</h1>
                 <p class="ex">How does the player move through the game, literally 
                     and figuratively, from tutorial to end? What are their
                     short-term and long-term goals (explicit or implicit)? 
                     How do these support the game concept, style, and
                     player-fantasy?</p>
                 <h2 >How to do a good tutorial</h2>
+                <h3>Plants vs. Zombies</h3>
                 <p>Every game teaches you how to play. Plants vs. Zombies is an 
                     interesting case study because it made “hardcore” strategy content 
                     accessible to casual and non-gamers. Before Plants vs. Zombies 
@@ -2031,7 +2111,7 @@
                     appealing to casual gamers, it avoided alienating the veteran 
                     gamer audience.
                 </p>
-                <h2 >How to do a good tutorial, Blend the tutorial into the game</h2>
+                <h3>Blend the tutorial into the game</h3>
                 <p>If you give players the option, they will almost always skip the tutorial. 
                    There are a lot of bad tutorials out there. The gaming audience would most 
                    likely describe a tutorial as “that part of the game 
@@ -2048,7 +2128,7 @@
                     gameplay; as opposed to a model where fun and learning are 
                     compartmentalized and the game part is just viewed as a reward.
                 </p>
-                <h2 >How to do a good tutorial, Better to have the player do than read</h2>
+                <h3>Better to have the player do than read</h3>
                 <p>There is a trade off between games and text as mediums to convey information. 
                     Text is information dense and easy to create; however, doing things is more 
                     fun and memorable. We will be the first to tell you to avoid games 
@@ -2061,7 +2141,7 @@
                     with the game’s mechanics – this is how we create experiences 
                     that are both engaging and educational.
                 </p>
-                <h2 >How to do a good tutorial, Spread out the teaching of the game mechanics</h2>
+                <h3>Spread out the teaching of the game mechanics</h3>
                 <p>The more a user is engaged and invested in an experience, the 
                     more willing and receptive they will be to spend time learning. 
                     It is counter-intuitive, but if you start with a tutorial that 
@@ -2069,19 +2149,19 @@
                     and gradually add more knowledge, the experience will be 
                     dramatically more effective in its educational goals.
                 </p>
-                <h2 >How to do a good tutorial, Just get the player to do it once</h2>
+                <h3>Just get the player to do it once</h3>
                 <p>The essence of this rule is to guide someone through an action 
                     thereby motivating them to perform the action for the first time. 
                     I don’t have much to add here other than blinking lights and animated 
                     arrows are by far the most efficient means of communicating action – 
                     wherever Fan could, he preferred this to text.
                 </p>
-                <h2 >How to do a good tutorial, Use fewer words</h2>
+                <h3>Use fewer words</h3>
                 <p>Fan’s rule was “there should be a maximum of eight words on 
                     the screen at any given moment”. Remember, this is advice 
                     for tutorial text; narrative text is a different story.</p>
                 <p>There are a number of reasons why brevity is king:
-                    <ol class="list">
+                    <ul class="list">
                         <li>There is psychology at work here: Miller’s Law: The 
                             Magical Number Seven, Plus or Minus Two. Having clear 
                             and concise text that you can read at a glance prevents 
@@ -2094,9 +2174,9 @@
                             over explaining and risk patronizing players.
                         </li>
                         <li>Did you notice that all of Fan’s tutorial rules are eight words or less?</li>
-                    </ol>
+                    </ul>
                 </p>
-                <h2 >How to do a good tutorial, Use unobtrusive messaging if possible</h2>
+                <h3>Use unobtrusive messaging if possible</h3>
                 <p>Fan recommends passive communication – displaying messages in 
                     a way that they do not interrupt the game. There is a subtle 
                     difference between a hint banner and a pop-up dialogue. 
@@ -2107,7 +2187,7 @@
                     passive communication can stay on the screen until the player 
                     takes the desired action.
                 </p>
-                <h2 >How to do a good tutorial, Use adaptive messaging</h2>
+                <h3>Use adaptive messaging</h3>
                 <p>Fan resisted the urge to pre-emptively tutorialize and avoided explicit 
                     direction as much as possible. Instead he favored hints and gave the 
                     player a chance to explore and discover. Adapting and reacting to the 
@@ -2120,7 +2200,7 @@
                     they have to experience. Measuring how much scaffolding a 
                     player needs is also a great metric for assessment.
                 </p>
-                <h2 >How to do a good tutorial, Don’t create noise</h2>
+                <h3>Don’t create noise</h3>
                 <p>Whatever methods you have to communicate with the user, make 
                     sure that tutorial text is always immediately relevant and 
                     focused. If you pollute your communication channels with jokes, 
@@ -2136,7 +2216,7 @@
                     tutorial into the game, I’d recommend one system purely 
                     for tutorial communication.
                 </p>
-                <h2 >How to do a good tutorial, Use visuals to teach</h2>
+                <h3>Use visuals to teach</h3>
                 <p>The stronger your visuals are the less teaching you will have to do. 
                     You should able to look at game objects and quickly establish 
                     what function they have in the game.
@@ -2144,7 +2224,7 @@
                     on the topic, having the art of your game “read” well can be 
                     more important than rigidly pursuing realism.
                 </p>
-                <h2 >How to do a good tutorial, Leverage what people already know</h2>
+                <h3>How to do a good tutorial, Leverage what people already know</h3>
                 <p>Players bring into the game space all of their previous life 
                     experiences. For example, it is practically common knowledge 
                     that zombies are dimwitted and slow moving compared to the 
@@ -2164,8 +2244,9 @@
                     teach is in the middle or towards the end of a game, after the 
                     player is engaged and invested in the experience.
                 </p>
-                <h2 >How to do a good tutorial, Patterns</h2>
-                <ul class="list">Positive Patterns:
+                <h3>How to do a good tutorial, Patterns</h3>
+                <ul class="list">
+                    <p id="list-p" style= color:#b667b6>Positive Patterns:</p>
                     <li>Doesn’t feel like a tutorial.</li>
                     <li>Doesn’t disrupt game flow.</li>
                     <li>Low chance of failing.</li>
@@ -2175,7 +2256,8 @@
                     <li>Freedom to experiment.</li>
                     <li>Focus on unique mechanics</li>
                 </ul>
-                <ul class="list">Negative Patterns:
+                <ul class="list">
+                    <p id="list-p" style= color:#b667b6>Negative Patterns:</p>
                     <li>Hand - Holding.</li>
                     <li>Not Skippable.</li>
                     <li>Patronizing.</li>
@@ -2187,7 +2269,8 @@
                     <li>Constant Pauses/Stops.</li>
                     <li>Too long.</li>
                 </ul>
-                <ul class="list">These are not specifically about positive or negative experiences:
+                <ul class="list">
+                    <p id="list-p" style= color:#b667b6>These are not specifically about positive or negative experiences:</p>
                     <li>Pop up messages.</li>
                     <li>Unable to Skip Messages.</li>
                     <li>Forced into games pace.</li>
@@ -2197,7 +2280,8 @@
                     <li>Short message preference.</li>
                     <li>Tutorials are necessary.</li>
                 </ul>
-                <h2 >Short versus Long-Term Progression in Game Design, Measuring the Carrot</h2>
+                <h2 >Short Versus Long-Term Progression In Game Design</h2>
+                <h3>Measuring The Carrot</h3>
                 <p>Motivating someone to keep playing your game has gotten a lot 
                     harder in recent years. The increase number of game sales and 
                     games being released daily has put a strain on all of our free 
@@ -2216,7 +2300,7 @@
                     part is figuring out which to include in your game and why short-term 
                     is typically the better form of progression.
                 </p>
-                <h2 >Short versus Long-Term Progression in Game Design, Short and Sweet</h2>
+                <h3>Short And Sweet</h3>
                 <p>Simply put, the player should remained engaged throughout the 
                     entire course of playing your title; when there is no motivating 
                     factor, the game becomes a grind and can kill the player's enthusiasm 
@@ -2248,7 +2332,7 @@
                     you can combine the two to create a layering effect that works 
                     incredibly well.
                 </p>
-                <h2 >Short versus Long-Term Progression in Game Design, Layered Progression</h2>
+                <h3>Layered Progression</h3>
                 <p>The basic use of short and long-term goals is to keep them separate, 
                     but a better option is to combine them both so that the short-term 
                     goals combine into a long-term one. In this way, you get the best 
@@ -2288,7 +2372,7 @@
                     is still doing the same things they did before, but with the 
                     added incentive of completing goals and getting end-game rewards.
                 </p>
-                <h2 >Short versus Long-Term Progression in Game Design, The right Mix</h2>
+                <h3>The right Mix</h3>
                 <p>Combining both short and long-term progression provides the 
                     best combination of progression models to keep someone engaged 
                     in your title. There is one other variant of short-term progression 
@@ -2310,7 +2394,7 @@
                     I’ve tried what is considered pure lootbox progression, and I can put 
                     into words why these two concepts are not the same.
                 </p>
-                <h2 >The Differences Between Random and Randomized Progression, The ARPG Loop</h2>
+                <h3>The ARPG Loop</h3>
                 <p>Before we get to it, let’s briefly define the ARPG loop for the uninitiated. ARPGs 
                     are built on the following gameplay loop: Fight Enemies| Get Loot| Grow Stronger|. 
                     ARPGS will always use some form of procedural generation when it comes 
@@ -2334,7 +2418,8 @@
                     Now with that said, let’s turn to lootbox progression, and a 
                     good example of this in the mobile space.
                 </p>
-                <h2 >The Differences Between Random and Randomized Progression, Contest of Lootbox</h2>
+                <h3>Contest Of Lootbox</h3>
+                <h4>Marvel’s Contest of Champions</h4>
                 <p>Marvel’s Contest of Champions is a light fighter/character collection 
                     game on mobile. It’s been out for a few years and is considered 
                     one of the more popular takes on the Marvel IP.
@@ -2343,6 +2428,7 @@
                     rarity. There are multiple copies of the various Marvel heroes 
                     and villains at different star levels: ranging from one to six.
                 </p>
+                <h4>Different Currencies and Fairness</h4>
                 <p>The higher the star level means that character will be stronger, 
                     and has a greater capacity for growth and strengthening them. 
                     By applying in-game currency in the form of Iso-8, you can level 
@@ -2355,44 +2441,50 @@
                 </p>
                 <p>To be fair to the game, even lower star versions of character still 
                     retain their usefulness in the game’s arena, where you can 
-                    fight AI-controlled versions of other teams.
+                    fight AI-controlled versions of other teams.</p>
 
-                    Now the kicker, all character unlocks in the game are defined 
+                <h4>Lootboxes For Everything</h4>
+                <p>Now the kicker, all character unlocks in the game are defined 
                     by the RNG of lootboxes, and there are a lot of them. There are 
                     lootboxes for resources, lootboxes for gold, lootboxes for every 
                     rarity level, lootboxes for items of every rarity level, themed 
                     lootboxes, limited time only lootboxes, if there is something 
                     in this game, chances are there is a comparative lootbox for it.
                 </p>
-                <p>And the chances to acquire champions gets less and less the higher 
+                <p>The chances to acquire champions gets less and less the higher 
                     the rarity goes. In a lootbox to acquire either a two- or four-star 
                     champion, I apparently had a three percent chance on a lucky pull 
                     if you believe the posted drop rates. There are lootboxes explicitly
-                    set up to drop a set rarity, but they are harder to find.
-
-                    Here’s another factor, when you decide to pull a lootbox, 
+                    set up to drop a set rarity, but they are harder to find.</p>
+                
+                <h4>Shuffle The Rewards</h4>
+                <p>Here’s another factor, when you decide to pull a lootbox, 
                     the game will randomly shuffle the possible rewards in it, 
                     as you can see by the scrolling roulette at the bottom of the 
                     screen, but the choice will be automatically determined without 
                     having to watch the slot machine: it is simply there to add excitement.
                 </p>
+                <h4>Progress In Game</h4>
                 <p>Progress in the game is limited based on the luck that you have 
                     with the lootboxes. If you’re only pulling two- and three-star 
                     characters, the fixed power in place puts a cap on how far you can 
                     easily progress in the story. If you get stuck at a story mission, 
                     you can spend consumables for boosts, healing, and character revives; 
-                    all costing the game’s premium resource.
+                    all costing the game’s premium resource.</p>
 
-                    As with other games of this type, a lucky pull can easily propel 
+                <p>As with other games of this type, a lucky pull can easily propel 
                     you through the game and make a lot of the content easier. With 
                     an early four-star champion, I manage to push through some of the 
                     early acts, but struggled to find better or equal champions.
                 </p>
+                <h4>Player Skills</h4>
                 <p>Player skill is a big part about Contest of Champions: someone 
                     who figures out the timings for attacking and defense can get 
                     further with weaker champions to a point. As with a lot of free 
                     to play/mobile games, the rewards and resources earned get better 
-                    on the harder maps. Having access to higher rarity champions early 
+                    on the harder maps.</p> 
+                    
+                <p>Having access to higher rarity champions early 
                     on gives you a heads up on resource collection, and there are some 
                     champions who are flat out amazing regardless of their star rarity.
 
@@ -2400,61 +2492,66 @@
                     Champions, it is about random progression, whereas ARPG design features 
                     randomized progression.
                 </p>
-                <h2 >The Differences Between Random and Randomized Progression, Player Controlled Progression</h2>
+                <h3>Player Controlled Progression</h3>
+                <h4>Randomized Progression</h4>
                 <p>Randomized progression has been a powerful motivator for players. 
                     That thrill of acquiring some new, powerful item has kept people 
                     playing many RPG-based games. Randomized progression seen in ARPGs 
                     is not the same as random progression in lootbox-styled games. 
                 </p>
+                <h4>The ARPG Example</h4>
                 <p>Playing an ARPG, the player is in controlled of their progression 
                     in several ways. By playing the game and leveling up, they are 
                     acquiring new skills and have complete control over how their 
                     character handles. At the end of the day, rare loot is not the 
-                    same in terms of utility as a new skill.
+                    same in terms of utility as a new skill.</p>
 
-                    Secondly, the player in a way does control how they get new 
+                <p>Secondly, the player in a way does control how they get new 
                     loot and upgrades to show up. As we’ve talked about with loot 
                     tables and design, ARPGs provide the player with clear events 
                     that signify the chance of great loot. There is that buildup of 
                     knowing that there is an epic enemy or rare chest, followed by 
                     the reveal of your reward.
                 </p>
+                <h4>The Lootbox Problem</h4>
                 <p>The problem with lootbox-focused games is that the lootboxes 
                     themselves drive all progression. You could play a game like 
                     Contest of Champions for 24 hours and not find one meaningful 
                     upgrade to your team or champions, or you could play for one hour 
                     and get a lucky drop. The player does not have control over the 
-                    progression in a loot box game.
+                    progression in a loot box game.</p>
 
-                    Random progression must be paired with something meaningful for it to matter.
-                    
+                <h4>Pair With Something Meaningful</h4>
+                <p>Random progression must be paired with something meaningful for it to matter.
                     Even though skill does matter in Contest, there is an explicit wall 
                     in the game in terms of getting champions that help. Later challenges 
-                    introduce specific rules and modifiers designed to give the AI more advantages. 
-                    These rules can boost their stats, punish you for using specific 
+                    introduce specific rules and modifiers designed to give the AI more advantages.</p> 
+                <p>These rules can boost their stats, punish you for using specific 
                     tactics or champions, and are designed as progression walls. 
                     When you get to this point, you must have champions who are able 
                     to counter them or there is no way without spending money to 
                     get past them.
                 </p>
+                <h4>Secondary Progression System</h4>
                 <p>It’s also important to bring to everyone’s attention that loot in 
                     ARPG or gear-driven games is a secondary progression system. 
                     With lootbox titles, the items and drops from them is your 
-                    primary progression system with skill being a distant second. 
-                    ARPGs also feature additional systems and ways of acquiring gear 
+                    primary progression system with skill being a distant second.</p> 
+                <p>ARPGs also feature additional systems and ways of acquiring gear 
                     in case you’re not getting lucky with drops. Path of Exile, 
                     Grim Dawn, and Diablo 3 all feature ways of buying or crafting 
                     gear that may not be as good as the finds in the field, but will 
                     allow players to at least be able to compete stat-wise with the 
                     enemies.
                 </p>
-                <h2 >The Differences Between Random and Randomized Progression, Loot or Luck</h2>
+                <h3>Loot or Luck</h3>
+                <h4>It works but...</h4>
                 <p>Lootbox progression works, as evident by the numerous free to 
                     play games and even retail games making use of it. However, 
                     equating them to the same kind of progression loop seen in 
-                    games with other progression mechanics is not right.
-
-                    Building an entire progression system on lootboxes alone does 
+                    games with other progression mechanics is not right.</p>
+                <h4>No motivation</h4>
+                <p>Building an entire progression system on lootboxes alone does 
                     not motivate someone to play over the long run. There is always 
                     a downward trend in unlocking progress with lootboxes the further 
                     someone plays. What always ends up happening is that there will 
@@ -2464,20 +2561,20 @@
                 <p>Some will argue that milling systems (taking resources and being 
                     able to apply them somewhere else) is an option, but when the 
                     cost becomes so great, the player will not have that rush when 
-                    it comes to opening up lootboxes anymore.
-
-                    Good design allows players to progress through multiple means, 
+                    it comes to opening up lootboxes anymore.</p>
+                <h4>Don't use lootbox with anything else...don't use at all!</h4>
+                <p>Good design allows players to progress through multiple means, 
                     and not force them down only one path. This is why the argument 
                     over time vs. money is a key part of talks on free to play design, 
                     but is too big of a subject for this post. Lootboxes can serve a 
                     purpose, but do not try to equate them to other forms of 
                     progression in any videogame.
                 </p>
-                <h1 >Game Systems</h1>
+                <h1 id="Game_systems">Game Systems</h1>
                 <p class="ex">What systems are needed to make this game? Which ones are internal 
                     (simulation, etc.) and which does the player interact with?</p>
                 <h2 >The Craft of Game Systems: General Guidelines </h2>
-                <h2 >The Craft of Game Systems: General Guidelines, What games is this best for</h2>
+                <h3>What games is this best for</h3>
                 <p>The approach to game design in these articles is analytical and methodical. 
                     It's best suited to games with a lot of content, like RPGs or strategy games.
 
@@ -2486,7 +2583,8 @@
                     My apologies if this material doesn't directly translate to your work - 
                     I hope you can still find them valuable.
                 </p>
-                <h2 >The Craft of Game Systems: General Guidelines, The Hallmarks of Good Systems</h2>
+                <h3>The Hallmarks of Good Systems</h3>
+                <h4>Characteristics Of A Good System</h4>
                 <p>RPG and strategy games tend to have a ton of content - more 
                     than any one person can keep in their head at once. Game systems 
                     don't just define how that content works - they are a tool that 
@@ -2495,80 +2593,88 @@
                     From a designer's perspective, good systems should be five things: 
                     comprehensible, consistent, predictable, extensible, and elegant.
                 </p>
-                <p>Comprehensible. You, the designer, should understand all the parts 
+                <h4>Comprehensible. </h4>
+                <p>You, the designer, should understand all the parts 
                     of your system. You should know how you choose various values in your 
                     game, why you do it that way, and what other rules and content 
                     those values impact. If you want to adjust your gameplay in a 
                     specific way, you should know what to change to get that result.
                 </p>
-                <p>Consistent. Your game rules and content should function the same 
+                <h4>Consistent</h4>
+                <p>Your game rules and content should function the same 
                     in all areas of your game. Armor shouldn't work differently for 
                     flying units, and the formula for gold value of items shouldn't 
                     change at high levels. This is a big part of making your game 
                     comprehensible to you.
                 </p>
-                <p>Predictable. You should be able to determine how your systems 
+                <h4>Predicatble</h4>
+                <p>You should be able to determine how your systems 
                     will behave in new circumstances. If you multiply experience 
                     gained by 2 in some situation, or introduce a monster with 
                     double the normal armor, you should be able to predict the 
                     results. Using simple progressions and formulas helps make 
                     predictable systems.
                 </p>
-                <p>Extensible. When you create new types of content for your game, 
+                <h4>Extensible</h4>
+                <p>When you create new types of content for your game, 
                     you should be able to easily extend your existing systems to 
                     include it. Maybe you decide what your game really needs is 
-                    randomly generated minibosses.
+                    randomly generated minibosses.</p>
 
-                    You should be able to extend your existing monster content to 
+                <p>You should be able to extend your existing monster content to 
                     include them easily. Extensibility makes it easier to design 
                     your game iteratively, adding new systems and content types 
-                    as they are needed.
+                    as they are needed.</p>
                 </p>
-                <p>
-                    Elegant. Elegant systems have a certain ... je ne sais quoi. 
+                <h4>Elegant</h4>
+                <p>Elegant systems have a certain ... je ne sais quoi. 
                     They create extremely rich situations from a small number of 
                     moving parts. Some of my favorite examples of elegant system 
                     design are 4th Edition D&D, Magic: the Gathering, and Settlers of 
                     Catan.
                 </p>
-                <h2 >The Craft of Game Systems: General Guidelines, Getting Started: Game Systems Follow Gameplay</h2>
+                <h3>Getting Started: Game Systems Follow Gameplay</h3>
+                <h4>The Questions</h4>
                 <p>Creating a game's systems and content is an intimidating task. It 
                     can seem like there will be a million variables in the game, and 
                     before you can start figuring out how they'll relate to each other, 
-                    you have to choose which ones your game will have in the first place.
+                    you have to choose which ones your game will have in the first place.</p>
 
-                    What stats will your game characters have? What will increase on 
+                <p>What stats will your game characters have? What will increase on 
                     level up? What types of upgrades can characters get? Items? Resources? 
                     Experience values? Gold costs? It's overwhelming.
                 </p>
-                <p>"Begin with the end in mind." - Stephen Covey</p>
-
+                <p><em>"Begin with the end in mind."</em> - Stephen Covey</p>
+                <h4>The First Step</h4>
                 <p>The first step is to clarify the game you're making. While systems 
-                    are the foundation of how a game works, they shouldn't be the starting point of its design.
+                    are the foundation of how a game works, they shouldn't be the starting point of its design.</p>
                     
-                    You might have a great idea for how mana regeneration will work in 
+                <p>You might have a great idea for how mana regeneration will work in 
                     your game, or how leveling will be affected by weapon types. Leave 
                     those ideas aside for now, and instead ask yourself: What is the core 
                     game loop? What interesting decisions will players be making? 
-                    What are the appeals you intend your game to have?
+                    What are the appeals you intend your game to have?</p>
                     
-                    Those are the aspects of your game that players engage with most 
+                <p>Those are the aspects of your game that players engage with most 
                     immediately, so your goal when designing systems should be to 
                     support the game experience you intend. Form follows function, 
-                    and systems follow gameplay.
+                    and systems follow gameplay.</p>
                 </p>
-                <h2 >The Craft of Game Systems: General Guidelines, Case Study: Dungeons and Dragons</h2>
+                <h3>Case Study: Dungeons and Dragons</h3>
+                <h4>What is D&D? (Dungeons and Dragons)</h4>
                 <p>Dungeons and Dragons is about role-playing characters in a fantasy 
                     setting and going on adventures with your friends. Teamwork and 
                     cooperation are an important part of the experience. Characters 
                     perform actions in turn, with the chance of success and results 
-                    of those actions defined by systems.
+                    of those actions defined by systems.</p>
 
-                    To make cooperation matter, there are a variety of types of challenges 
+                <p>To make cooperation matter, there are a variety of types of challenges 
                     (combat, disarming traps, social interactions) and combat roles 
                     (defender, striker, support) that characters can be strong or weak in.
                 </p>
-                <ul class="list">As a systems designer, the above description would direct my work in several ways:
+                <h4>Guidelines</h4>
+                <p>As a systems designer, the above description would direct my work in several ways:</p>
+                <ul class="list">
                     <li>To encourage teamwork, systems should allow characters to excel 
                         in certain types of challenges and combat roles, but not others.
                     </li>
@@ -2582,7 +2688,8 @@
                     uncomplicated.
                     </li>
                 </ul>
-                <h2 >The Craft of Game Systems: General Guidelines, The Components of Game Systems</h2>
+                <h3>The Components of Game Systems</h3>
+                <h4>Parameters, Rules And Content</h4>
                 <p>"Game Systems" or "Mechanics" can be broken down into three components: Parameters, Rules, and Content.</p>
                 <ul class="list">
                     <li>Parameters are the values that your game systems use to 
@@ -2600,59 +2707,61 @@
                         has parameters that define it, like damage for a weapon, 
                         or attributes for a character.</li>
                 </ul>
-                <p>In this screenshot of Final Fantasy XIII, the content is the monsters, 
+                <h4>The FFXIII Example (Final Fantasy)</h4>
+                <p>In Final Fantasy XIII, the content is the monsters, 
                     characters, and the weapons they're using. The parameters are the 
                     values for all of their stats that affect combat, such as their 
                     health. The damage values when the hero strikes a monster are 
                     determined by rules, using the character parameters and 
                     some randomization.
                 </p>
+                <h4>The MTG Example (Magic The Gathering) </h4>
                 <p>For a different kind of example, the content in Magic: the 
                     Gathering is the cards. Each card in the game represents a 
                     noun that players can summon, like a creature or land, or an 
-                    action that players can perform, like casting a spell.
+                    action that players can perform, like casting a spell.</p>
 
-                    The rules define the different types of cards and how they function. 
+                <p>The rules define the different types of cards and how they function. 
                     This creature's special abilities also fall under rules, as does its 
                     "Creature" type, as that defines its functionality in the game's rules. 
                     The creature type, costs, stats, and ability values are all parameters.
                 </p>
-                <h2 >The Craft of Game Systems: General Guidelines, Designing a Game System in Five Steps</h2>
+                <h3>Designing a Game System in Five Steps</h3>
                 <p>Once you're ready, break the task down into pieces and tackle one at a time. 
                     This is the process that I use to design and 
                     iterate game systems:
                 </p>
-                <ol class="list">
+                <ul class="list">
                     <li>Choose the parameters that your game uses.</li>
                     <li>Design rules that are no more complex than necessary to implement your game vision.</li>
                     <li>Define the progressions for how parameters change throughout the game.</li>
                     <li>Design content types that are as complex and interesting as you can manage.</li>
                     <li>Add new parameters, systems, and content types in layers as needed.</li>
-                </ol>
-
+                </ul>
+                <h4>Start With Parameters</h4>
                 <p>Parameters are the first step because choosing them helps focus what 
                     aspects of gameplay need to be reflected in your systems. While 
                     parameters are closely related to content, if you start by 
                     hinking of all the types of content your game will include, 
-                    it's easy to bloat your parameter list.
+                    it's easy to bloat your parameter list.</p>
 
-                    Starting with parameters and then rules for how they interact 
+                <p>Starting with parameters and then rules for how they interact 
                     helps you make the hard cuts up front and keep your content 
                     and rules lean.
                 </p>
-                <h2 >The Craft of Game Systems: General Guidelines, Conclusion</h2>
+                <h3>Conclusion</h3>
                 <p>Much of game design is an art. The quality of content and the appeal 
                     of various design choices are subjective and vary from player to player. 
-                    Good system design is more of a craft.
+                    Good system design is more of a craft.</p>
 
-                    Game systems are a tool that designers use for creating and tweaking content. 
+                <p>Game systems are a tool that designers use for creating and tweaking content. 
                     In terms of ease of tweaking and resistance to degenerate cases in games, some 
                     system designs are objectively superior to others.
                 </p>
 
                 
                 
-                <h1 >Interactivity</h1>
+                <h1 id="Interactivity">Interactivity</h1>
                 <p class="ex">How are different kinds of interactivity used? 
                     (Action/Feedback, ST Cog, LT Cog, Emotional, Social, Cultural)
                     What is the player doing moment-by-moment? How does the player 
@@ -2660,36 +2769,44 @@
                     physics/combat/etc. work? A clear, professional-looking sketch 
                     of the primary game UX is helpful
                 </p>
-                <h2 >What is interactivity</h2>
+                <h2>Interactivity Explained</h2>
+                <h3>What Is Interactivity?</h3>
                 <p>Interactivity is, in the most simplest of terms, a term used 
                     to describe how the player experiences the story, mechanics, 
                     and environment of a game. There are numerous discussions on 
-                    the topic of Interactivity in Video Games. Interactivity has changed significantly 
+                    the topic of Interactivity in Video Games.</p>
+                <h3>The Changements</h3>
+                <p>Interactivity has changed significantly 
                     since the arrival of the Atari 2600, and this is due to the 
                     introduction of new means to make the experience of a game likely, 
                     involved, and interesting. This is balanced with making sure that 
                     the game itself does not force players into suspending disbelief. 
                     These are necessary so as to prevent players from becoming disillusioned 
                     by the game and therefore choosing to stop playing it.</p>
-                    <p>The simplest example of Interactivity reverts back to the Atari 2600, 
+                <h3>The Simplest Examples</h3>
+                <p>The simplest example of Interactivity reverts back to the Atari 2600, 
                         in which games were developed for home consoles to emulate the 
                         same experience as if in an arcade. Because they had to be simple, 
                         having low learning curves, and adaptability, these games are the prototype 
                         from which developers would learn or adapt their end product. 
                         Some frequent examples include Pitfall, Enduro, and Frogger.
-                    </p>
-                    <p>Interactivity has, however, developed significantly since Atari 2600’s 
+                </p>
+                <h3>The Development</h3>
+                <p>Interactivity has, however, developed significantly since Atari 2600’s 
                         lineup of games. Most successful and influential titles (e.g. Best PC Games: Editors’ 
                         Choice Games Reviewed by IGN) are now expected to have well developed environments, 
                         industry standard music (if not better), and character models which are imaginative, 
-                        but identifiable. Interactivity also determines which game mechanics are standardized
+                        but identifiable.</p>
+                <h3>Interactivity and Mechanics</h3>
+                <p>Interactivity also determines which game mechanics are standardized
                         based on game genres. These mechanics tend to become tropes in their respective genres. 
                         This can range from the regenerating health mechanic courtesy of Call of Duty games 
                         (post-Modern Warfare), the turn-based system of fighting courtesy of Final Fantasy,
                         and the use of quick time events (QTE) courtesy of God of War (although Dragon’s Lair, 
                         a 1983 arcade game later remastered for the PS3/PS4, was the first to introduce QTE).
                     </p>
-                    <p>If the interactivity of a game is difficult, cumbersome, or 
+                <h3>The Pitfalls</h3>
+                <p>If the interactivity of a game is difficult, cumbersome, or 
                         insufficient for a player to invest in a game, then it may result 
                         in the game becoming known only for those qualities more. 
                         One very infamous example is E.T., an Atari 2600 adaptation 
@@ -2702,25 +2819,26 @@
                         gamer. However, interactivity is one of the qualities which defines 
                         how successful a game is. 
                     </p>
-                    <h2 >UX design overview</h2>
-                    <p>There is no exact definition of what User Experience (UX) 
+                <h2>UX design overview</h2>
+                <h3>Definition and Overview</h3>    
+                <p>There is no exact definition of what User Experience (UX) 
                         is, as this discipline is mainly about improving the 
                         experience and the way people interact with a given product.
-                    </p>
-                    <p>UX design is often associated with User Interface (UI), 
+                </p>
+                <p>UX design is often associated with User Interface (UI), 
                         and involves the construction of elements like navigation, 
                         ergonomics, usability and user path in a given interface 
                         (website, mobile app, video game, and even those ticket 
                         vending machines that drive me insane).
-                    </p>
-                    <p>In fact, UX covers a much wider range of fields including 
+                </p>
+                <p>In fact, UX covers a much wider range of fields including 
                         product design, economic systems, all kinds of services 
                         and by extension our everyday life.
                         As you can expect, it refers to several cognitive aspects 
                         when using a product or service, including functional and 
                         emotional expectations by placing the user (and not just the 
                         function) at the heart of the usage scenario.
-                    </p>
+                </p>
 
             </section>
             
