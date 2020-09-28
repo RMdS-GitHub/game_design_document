@@ -13,7 +13,7 @@
         <link rel='stylesheet' type='text/css' href='css/css_normalize.css'>-->
         
         <!--FontAwesome.-->
-        <!--<script src="https://kit.fontawesome.com/f08dd09bd3.js" crossorigin="anonymous"></script>-->
+        <script src="https://kit.fontawesome.com/f08dd09bd3.js" crossorigin="anonymous"></script>
         
         <!--External fonts.-->
         <!--<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">-->
@@ -82,6 +82,37 @@
             font-weight: bold;
         }
         /*SIDEBAR END*/
+
+        /*SIDEBAR DROPDOWN*/
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        .dropdown-container {
+            display: none;
+            background-color: #261526;
+            padding-left: 0px;
+        }
+        /*Style the dropdown button.*/
+        .dropdown-btn {
+            padding: 0px 0px 32px 0px;
+            text-decoration: none;
+            font-size: 60px;
+            color:  #44a5bd;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+        /* On mouse-over */
+        .dropdown-btn:hover {
+            color: #7fddf5;
+        }
+        /* Add an active class to the active dropdown button */
+        .active {
+            color: #7fddf5;
+        }
+        /*SIDEBAR DROPDOWN END*/
         
         /*Style the page content.*/
         #main-doc {
@@ -160,10 +191,26 @@
         width: 1em; /* Also needed for space (tweak if needed) */
         margin-left: -1em; /* Also needed for space (tweak if needed) */
         }
-        
         /*Padding for long p's inside list.*/
         #list-p {
             padding-left: 0px;
+        }
+        /*Style for the links ta the end of the document*/
+        /* unvisited link */
+        #link:link {
+            color: #dff9ff;
+        }
+        /* visited link */
+        #link:visited {
+            color: #44a5bd;
+        }
+        /* mouse over link */
+        #link:hover {
+            color: #7fddf5;
+        }
+        /* selected link */
+        #link:active {
+            color: blue;
         }
 
         /*MEDIA QUERIES TEST*/
@@ -181,22 +228,37 @@
             <header>Creating a Game Design Concept</header>
             <a class="nav-link" href="#What's_this_about_?">What's this about?</a>
             <a class="nav-link" href="#High_level_Concept">High Level Concept</a>
+              <button class="dropdown-btn">
+                    <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
                 <a class="nav-link-sub" href="#Working_title">Working title</a>
                 <a class="nav-link-sub" href="#Concept_statement">Concept statement</a>
                 <a class="nav-link-sub" href="#Genre(s)">Genre(s)</a>
                 <a class="nav-link-sub" href="#Target_audience">Target audience</a>
                 <a class="nav-link-sub" href="#Unique_Selling_Points">Unique Selling Points</a>
+              </div>
             <a class="nav-link" href="#Product_Design">Product Design</a>
+                <button class="dropdown-btn">
+                    <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
                 <a class="nav-link-sub" href="#Player_Experience">Player Experience and Game POV</a>
                 <a class="nav-link-sub" href="#Visual">Visual and Audio Style</a>
                 <a class="nav-link-sub" href="#Game_World">Game World Fiction</a>
                 <a class="nav-link-sub" href="#Monetization">Monetization</a>
                 <a class="nav-link-sub" href="#Platforms">Platform(s), Technology, and Scope (brief)</a>
+               </div>
             <a class="nav-link" href="#Detailed_and_Game_Systems_Design">Detailed and Game Systems Design</a>
+             <button class="dropdown-btn">
+                <i class="fa fa-caret-down"></i>
+             </button>
+             <div class="dropdown-container">
                 <a class="nav-link-sub" href="#Core">Core Loops</a>
                 <a class="nav-link-sub" href="#Objectives">Objectives and Progression</a>
                 <a class="nav-link-sub" href="#Game_systems">Game Systems</a>
                 <a class="nav-link-sub" href="#Interactivity">Interactivity</a>
+            </div>
             <a class="nav-link" href="#From_here_on!">From here on!</a>
         </nav>
         
@@ -2845,8 +2907,120 @@
             <!--Section 5, From here on.-->
             <section class="main-section" id="From_here_on!">
                 <header>From here on!</header>
-            </section>
+                <h1>Detailed Game Design Documentation</h1>
+                <p>The next step is to create a full game design document.</p>
+                
+                <p>In this  <a id="link"href="https://www.gamasutra.com/view/feature/130127/design_document_play_with_fire.php" target="_blank">link</a> 
+                    you can find a very good example.</p>
+                
+                <h2>Links to detailed articles</h2>
+                    <p><a id="link"href="https://infosourcesite.com/how-to-write-a-video-game-concept-statement/" target="_blank">
+                        How to Write a video game concept statement.</a></p>
+                    
+                        <p><a id="link"href="https://www.giantbomb.com/profile/oldmanlollipop/lists/games-with-awesome-titles/11297/" target="_blank">Games with awesome titles.</a></p>
+            
+                        <p><a id="link"href="https://en.wikipedia.org/wiki/List_of_video_game_genres" target="_blank">
+                    List of video games genres.</a></p>
+                    
+                    <p><a id="link"href="https://www.gamasutra.com/blogs/JustinCarroll/20170313/258979/How_to_Research_Your_next_Games_Target_Audience_for_Free.php" target="_blank">
+                        How to Research Your next Game's Target Audience for Free</a></p>
+                    <p><a id="link"href="https://www.bkomstudios.com/blog/blog-game-design/choosing-your-audience/" target="_blank">Choosing your Audience</a></p>
+                    <p><a id="link"href="https://techjury.net/blog/video-game-demographics/#gref" target="_blank">Video Game Demographics – Who Plays Games in 2020</a></p>
+                    <p><a id="link"href="https://www.gamesindustry.biz/articles/2019-03-01-how-to-market-your-game" target="_blank">
+                        How to market your video game and find your target audience</a></p>
+                    <p><a id="link"href="https://www.slideshare.net/jonreigatemedia/video-games-audiences-136548864" target="_blank">
+                    Slideshow evolving media: video games.</a></p>
+                    <p><a id="link"href="https://www.esrb.org/" target="_blank">ESBR game ratings.</a></p>
+                    <p><a id="link"href="https://en.wikipedia.org/wiki/Video_game_content_rating_system" target="_blank">
+                    Video game content rating system.</a></p>
+                    <p><a id="link"href="https://www.gamemarketinggenie.com/blog/highlighting-your-games-usp" target="_blank">
+                    How to highlight your game's USP.</a></p>
+                    <p><a id="link"href="https://www.gamasutra.com/blogs/JohanToresson/20140108/208212/Defining_Your_USPs_And_Positioning_Yourself_What_Is_This_Game.php" target="_blank">
+                    Defining Your USPs And Positioning Yourself: What Is This Game?</a></p>
+                    <p><a id="link"href="https://uxmag.com/articles/the-elements-of-player-experience" target="_blank">
+                    The elements of player experience.</a></p>
+                    <p><a id="link"href="https://altugi.wordpress.com/2013/01/14/three-types-of-point-of-view-in-video-games/" target="_blank">
+                    Three types of point-of-view games.</a></p>
+                    <p><a id="link"href="https://opengameart.org/content/chapter-3-perspectives" target="_blank">
+                    Perspectives in 2D games.</a></p>
+                    <p><a id="link"href="https://learn.canvas.net/courses/3/pages/level-10-dot-1-points-of-view?module_item_id=44590" target="_blank">
+                    Points of view, camera in games.</a></p>
+                    <p><a id="link"href="https://en.wikipedia.org/wiki/Video_game_music" target="_blank">Video game music.</a></p>
+                    <p><a id="link"href="https://www.gamasutra.com/view/feature/185676/the_aesthetics_of_game_art_and_.php?print=1" target="_blank">
+                    The aesthetics of game art and game design.</a></p>
+                    <p><a id="link"href="https://3d-ace.com/press-room/articles/2d-game-art" target="_blank">
+                    2D game art styles: the ultimate guide.</a></p>
+                    <p><a id="link"href="https://gamedesign2016.wordpress.com/2016/01/14/analysis-of-the-impact-of-visual-style/" target="_blank">
+                    Analysis of the impact of visual style.</a></p>
+                    <p><a id="link"href="https://en.wikipedia.org/wiki/List_of_video_games_considered_artistic" target="_blank">
+                    List of video games considered artistic.</a></p>
+                    <p><a id="link"href="https://en.wikipedia.org/wiki/Video_game_graphics" target="_blank">Video game graphics</a></p>
+                    <p><a id="link"href="https://io9.gizmodo.com/the-richest-scifi-and-fantasy-worlds-in-video-games-1822750865" target="_blank">
+                    The richest scifi and fantasy worlds in video games.</a></p>
+                    <p><a id="link"href="https://glassyeyewear.com/blogs/article/a-guide-to-the-different-types-of-video-game-platforms" target="_blank">
+                    A guide to the different types of video games platforms.</a></p>
+                    <p><a id="link"href="https://en.wikipedia.org/wiki/Game_engine" target="_blank">Game engines.</a></p>
+                    <p><a id="link"href="https://askagamedev.tumblr.com/post/105543803526/what-is-the-average-team-size-for-developing-a-aaa" target="_blank">
+                    What is the average team size for developing a AAA game?</a></p>
+                    <p><a id="link"href="https://www.gamedesigning.org/video-game-development/" target="_blank">
+                    Video game development process.</a></p>
+                    <p><a id="link"href="https://gamedevacademy.org/best-game-development-languages/" target="_blank">
+                    Best Coding languages for game development.</a></p>
+                    <p><a id="link"href="https://www.whatgamesare.com/loop.html" target="_blank">The loop.</a></p>
+                    <p><a id="link"href="https://marionettestudio.com/agile-game-development-quick-overview/" target="_blank">
+                    Agile game development overview.</a></p>
+                    <p><a id="link"href="https://www.gamasutra.com/view/feature/129948/the_chemistry_of_game_design.php?page=1" target="_blank">
+                    The chemistry of game design</a></p>
+                    <p><a id="link"href="https://gameanalytics.com/blog/how-to-perfect-your-games-core-loop.html" target="_blank">
+                    How to perfect your games core loop.</a></p>
+                    <p><a id="link"href="https://lostgarden.home.blog/2012/04/30/loops-and-arcs/" target="_blank">
+                    Loops and arcs.</a></p>
+                    <p><a id="link"href="https://lostgarden.home.blog/worth-reading/" target="_blank">
+                    List of books about game design.</a></p>
+                    <p><a id="link"href="https://insights.dice.com/2012/10/23/make-free-to-play-games-pay/" target="_blank">
+                    Top 5 ways to monetize free to play games.</a></p>
+                    <p><a id="link"href="https://www.gamerefinery.com/5-new-monetization-features-retention/" target="_blank">
+                    5 new ways to use monetization mechanics to boost retention.</a></p>
+                    <p><a id="link"href="https://www.gamasutra.com/blogs/NathanHedges/20171013/307378/Video_Game_Tutorials_How_Do_They_Teach.php" target="_blank">
+                    Video games tutorials: how do they teach.</a></p>
+                    <p><a id="link"href="https://www.filamentgames.com/blog/10-tips-designing-game-tutorial/" target="_blank">
+                    10 tips for designing a game tutorial.</a></p>
+                    <p><a id="link"href="https://www.gamasutra.com/blogs/JoshBycer/20160205/265231/Short_vs_LongTerm_Progression_in_Game_Design.php" target="_blank">
+                    Short vs long-term progression in game design.</a></p>
+                    <p><a id="link"href="https://www.gamasutra.com/view/news/128271/The_Craft_of_Game_Systems_General_Guidelines.php" target="_blank">
+                    The craft of games systems: general guidelines.</a></p>
+                    <p><a id="link"href="https://www.researchgate.net/publication/260254237_Cognitive_behavioral_game_design_A_unified_model_for_designing_serious_games" target="_blank">
+                    Cognitive behavioral game design: A unified model for designing serious games</a></p>
+                    <p><a id="link"href="https://hal.inria.fr/hal-01056362/document" target="_blank">
+                    Interactivity in games: The player's engament PDF.</a></p>
+                    <p><a id="link"href="https://the-artifice.com/video-gaming-story-telling-interactivity/" target="_blank">
+                    Story telling and interactivity in video gaming.</a></p>
+                    <p><a id="link"href="https://www.peachpit.com/articles/article.aspx?p=102309&seqNum=2" target="_blank">
+                    Achieving and enhancing gameplay in game design.</a></p>
+                    <p><a id="link"href="http://www.anabiosispress.org/VM606/1stPerson_ezimmerman.pdf" target="_blank">
+                    Narrative, interactivity, pLayand games: four naughty concepts in need of disciptine PDF.</a></p>
+                    <p><a id="link"href="https://uxdesign.cc/ux-and-video-game-design-5d8bcc50be67" target="_blank">
+                    Introduction to UX in game design.</a></p>
+          </section>
          </main>
+         <script>
+            /* Loop through all dropdown buttons to toggle between hiding and 
+            showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+            
+            for (i = 0; i < dropdown.length; i++) {
+              dropdown[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var dropdownContent = this.nextElementSibling;
+              if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+              } else {
+              dropdownContent.style.display = "block";
+              }
+              });
+            }
+        </script>
     </body>
 </html>
           
