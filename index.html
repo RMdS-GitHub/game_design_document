@@ -10,7 +10,8 @@
         <title>Creating a Game Design Document</title>
 
         <!--Css external file-->
-        <link rel='stylesheet' type='text/css' href='css/css_normalize.css'>-->
+        <link rel='stylesheet' type='text/css' href='css/css_normalize.css'>
+        <link rel='stylesheet' type='text/css' href='css/css.css'>
         
         <!--FontAwesome.-->
         <script src="https://kit.fontawesome.com/f08dd09bd3.js" crossorigin="anonymous"></script>
@@ -18,207 +19,6 @@
         <!--External fonts.-->
         <!--<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">-->
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
-           
-        <!--Css before external file.-->
-        <style>
-        body {
-            color: #4d9a06;
-            background-color: #300a24;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 16px;
-        }
-        /*SIDEBAR START*/
-        #navbar {
-            /*Full-heigh, to remove if "auto" is wanted.*/
-            height: 100%;
-            /*Set the width of the sidebar.*/
-            width : 200px;
-            /*Fixed sidebar, stay in place while scrolling.*/
-            position: fixed;
-            /*Stay on top of everything.*/
-            z-index: 1;
-            /*Stay at the top.*/
-            top: 0;
-            left: 0;
-            background-color: #261526;
-            /*Disable horizontal scroll.*/
-            overflow-x: hidden;
-            padding-left: 16px;
-            padding-right: 16px;
-        }
-        /*Nav bar header.*/
-        #navbar header {
-            padding: 16px 0px 32px 0px;
-            color: #75dc16;
-        }
-
-        /*Navigation menu links.*/
-        .nav-link {
-            padding-bottom: 32px;
-            text-decoration: none;
-            font-size: 1.5em;
-            color: #3680d6;
-            display: block;
-        }
-        .nav-link-sub {
-            padding-bottom: 32px;
-            text-decoration: none;
-            font-size: 1em;
-            color:  #44a5bd;
-            display: block;
-        }
-
-        /*Change color mouse over.*/
-        /*NOTICE THE SYNTAX!!!*/
-        a.nav-link:hover {
-            color: #93c2f8;
-            /*Cheap animation.*/
-            font-weight: bold;
-
-        }
-        a.nav-link-sub:hover {
-            color:  #7fddf5;
-            /*Cheap animation.*/
-            font-weight: bold;
-        }
-        /*SIDEBAR END*/
-
-        /*SIDEBAR DROPDOWN*/
-        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-        .dropdown-container {
-            display: none;
-            background-color: #261526;
-            padding-left: 0px;
-        }
-        /*Style the dropdown button.*/
-        .dropdown-btn {
-            padding: 0px 0px 32px 0px;
-            text-decoration: none;
-            font-size: 60px;
-            color:  #44a5bd;
-            display: block;
-            border: none;
-            background: none;
-            width: 100%;
-            text-align: left;
-            cursor: pointer;
-            outline: none;
-        }
-        /* On mouse-over */
-        .dropdown-btn:hover {
-            color: #7fddf5;
-        }
-        /* Add an active class to the active dropdown button */
-        .active {
-            color: #7fddf5;
-        }
-        /*SIDEBAR DROPDOWN END*/
-        
-        /*Style the page content.*/
-        #main-doc {
-            /*The same as the navbar.*/
-            margin-left: 232px;
-        }
-        /*Header style for main doc.*/
-        #main-doc header {
-            color: #3680d6;
-            font-weight: bold;
-            padding-bottom: 32px;
-            padding-top: 32px;
-            font-size: 2em;
-        }
-        /*Style for the p's.*/
-        p {
-            padding-left: 128px;
-            padding-bottom: 16px;
-        }
-
-        /*First paragraph of each topic explaining.*/
-        .ex {
-            padding-left: 128px;
-            padding-bottom: 16px;
-            color:#75dc16;
-        }
-
-        /*Style for h1's subtitles.*/
-        #main-doc h1 {
-            color: #44a5bd;
-            font-size: 1.8em;
-            padding-left: 64px;
-            padding-bottom: 16px;
-        }
-
-        /*Style for the h2*/
-        #main-doc h2 {
-            color: #8798e4;
-            padding-left: 128px;
-            padding-bottom: 16px;
-            font-size: 1.6em;
-        }
-
-        /*Style for the h3*/
-        #main-doc h3 {
-            color: #4467ff;
-            padding-left: 128px;
-            padding-bottom: 16px;
-            font-size: 1.2em;
-        }
-
-        /*STyle for the h4*/
-          /*Style for the h3*/
-          #main-doc h4 {
-            color: #b667b6;
-            padding-bottom: 16px;
-            font-size: 1em;
-        }
-        h4 {
-            padding-left: 128px;
-        }
-        /*Style for the list.*/
-        .list {
-            padding-left: 256px;
-            list-style: none;
-        }
-        .list li {
-            padding-bottom: 8px;
-        }
-        /*CHange the color of the bullet list*/
-        ul li::before {
-        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-        color: #b667b6; /* Change the color */
-        font-weight: bold; /* If you want it to be bold */
-        display: inline-block; /* Needed to add space between the bullet and the text */
-        width: 1em; /* Also needed for space (tweak if needed) */
-        margin-left: -1em; /* Also needed for space (tweak if needed) */
-        }
-        /*Padding for long p's inside list.*/
-        #list-p {
-            padding-left: 0px;
-        }
-        /*Style for the links ta the end of the document*/
-        /* unvisited link */
-        #link:link {
-            color: #dff9ff;
-        }
-        /* visited link */
-        #link:visited {
-            color: #44a5bd;
-        }
-        /* mouse over link */
-        #link:hover {
-            color: #7fddf5;
-        }
-        /* selected link */
-        #link:active {
-            color: blue;
-        }
-
-        /*MEDIA QUERIES TEST*/
-        /*@media screen and (max-height: 450px) {
-            #navbar {padding-top: 15px;}
-            #navbar a {font-size: 18px;}
-        }*/
-        </style>    
     </head>
 
     <body>
@@ -479,7 +279,8 @@
                 <p>Here’s the gist of what you’ll be doing:</p>
                 <ul class="list">
                     <li>The first thing you’ll do is make a list of your game’s 3 biggest competitors.</li>
-                    <li>Then you mine their audiences for demographics and interests, documenting the results along the way.</li>
+                    <li>Then you mine their audiences for demographics and interests, documenting the 
+                        results along the way.</li>
                     <li>And finally you’ll note the overlap to find your game’s tentative target audience.</li>
                 </ul>
                 <p>I call this the Lookalike Target Audience Research Method. Obviously, 
@@ -2909,9 +2710,17 @@
                 <header>From here on!</header>
                 <h1>Detailed Game Design Documentation</h1>
                 <p>The next step is to create a full game design document.</p>
-                
                 <p>In this  <a id="link"href="https://www.gamasutra.com/view/feature/130127/design_document_play_with_fire.php" target="_blank">link</a> 
                     you can find a very good example.</p>
+                <p>In a more detailed document you should include code, and even
+                    artwork.</p> 
+                <p>Example of code:</p>
+                <p><code>func _physics_process(delta: float) -> void:</code></p>
+                <p><code>var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0</code></p>
+                <p><code>var direction: = get_direction()</code></p>
+                <p><code>_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)</code></p>
+                <p><code>_velocity = move_and_slide(_velocity, FLOOR_NORMAL)</code></p>
+              
                 
                 <h2>Links to detailed articles</h2>
                     <p><a id="link"href="https://infosourcesite.com/how-to-write-a-video-game-concept-statement/" target="_blank">
