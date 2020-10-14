@@ -10,7 +10,7 @@ body {
     /*Full-heigh, to remove if "auto" is wanted.*/
     height: 100%;
     /*Set the width of the sidebar.*/
-    width : 200px;
+    width : 220px;
     /*Fixed sidebar, stay in place while scrolling.*/
     position: fixed;
     /*Stay on top of everything.*/
@@ -95,7 +95,7 @@ a.nav-link-sub:hover {
 /*Style the page content.*/
 #main-doc {
     /*The same as the navbar.*/
-    margin-left: 232px;
+    margin-left: 262px;
 }
 /*Header style for main doc.*/
 #main-doc header {
@@ -192,56 +192,106 @@ margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 /*MEDIA QUERIES*/
 /*MEDIA QUERIES SAME ORDER AS IN BROWSER CONSOLE*/
-@media screen and (max-width: 1920px)
-{}
-
-@media screen and (max-width: 3840px)
-{}
-
-@media screen and (max-width: 1280px)
-{}
-
-@media screen and (max-width: 360px)
-{}
-
-@media screen and (max-width: 414px)
-{}
-
-@media screen and (max-width: 768px)
-{}
-
-@media screen and (max-width: 834px)
-{}
-
-@media screen and (max-width: 1024px)
-{}
-
-@media screen and (max-width: 320px)
-{}
-
-  @media screen and (max-width: 375px)
-{}
-
-@media screen and (max-width: 800px)
-{}
-
-@media screen and (max-width: 1440px)
-{}
-
-@media screen and (max-width: 384px)
-{}
-
-@media screen and (max-width: 412px)
-{}
-
-@media screen and (max-width: 600px)
-{}
-
-@media screen and (max-width: 240px)
-{}
-
-@media screen and (max-width: 411px)
-{}
+@media screen and (min-width: 3840px) and (max-width: 3840px)/*OK*/
+{
+    body {
+        font-size: 24px;
+    }
+    #navbar {
+        width : 280px;
+    }
+    #main-doc {
+        margin-left: 330px;
+    }
+}
+@media screen and (min-width: 240px) and (max-width: 719px)/*OK*/
+{
+    body {
+        font-size: 10px;
+    }
+    #navbar {
+        width: 55px;
+        font-size: 6px;
+        padding-left: 2px;
+    }
+    #main-doc {
+        margin-left: 80px;
+    }
+    p {
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    #main-doc h1 {
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    #main-doc h2 {
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    #main-doc h3 {
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    #main-doc h4 {
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    h4 {
+        padding-left: 0px;
+    }
+    .ex {
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    .list {
+        margin-left: 8px;
+        padding-left: 0px;
+    }
+}
+@media screen and (min-width: 720px) and (max-width: 960px)/*OK*/
+{
+    body {
+        font-size: 10px;
+    }
+    #navbar {
+        width : 120px;
+    }
+    #main-doc {
+        margin-left: 160px;
+    }
+    p {
+        margin-left: 10px;
+        padding-left: 0px;
+    }
+    #main-doc h1 {
+        margin-left: 10px;
+        padding-left: 0px;
+    }
+    #main-doc h2 {
+        margin-left: 10px;
+        padding-left: 0px;
+    }
+    #main-doc h3 {
+        margin-left: 10px;
+        padding-left: 0px;
+    }
+    #main-doc h4 {
+        margin-left: 10px;
+        padding-left: 0px;
+    }
+    h4 {
+        padding-left: 10px;
+    }
+    .ex {
+        margin-left: 10px;
+        padding-left: 0px;
+    }
+    .list {
+        margin-left: 40px;
+        padding-left: 0px;
+    }
+}
 
 
 
